@@ -150,3 +150,12 @@ body {
     opacity: 0;
   }
 }
+/* swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #595959 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem !important;
+}

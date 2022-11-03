@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <nav className="sticky top-0">
+      <nav className="sticky top-0 bg-white bg-opacity-60 backdrop-blur-md z-50">
         <Navbar />
       </nav>
       <main>{children}</main>

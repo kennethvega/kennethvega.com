@@ -3,13 +3,14 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { TbExternalLink } from "react-icons/tb";
 import Button from "./utility/Button";
 import Tippy from "@tippyjs/react";
+import Link from "next/link";
 const Hero = () => {
   return (
-    <div className="px-2 h-[100vh] flex items-center">
+    <div className="h-[100vh] flex items-center">
       <div className="-mt-16">
         <div>
           <h2 className="text-[2.5rem] font-medium">
-            I’m a <span className="underline">front-end</span> software
+            <strong> Hello, I’m Kenneth.</strong> <br /> A front-end software
             developer focused on building beautiful web interfaces and
             applications.
           </h2>
@@ -37,7 +38,9 @@ const Hero = () => {
               </Tippy>
             </span>
             <div className="mt-16 flex gap-10">
-              <Button>Look at my work &#8595;</Button>
+              <Link href="/#projects">
+                <Button>Look at my work &#8595;</Button>
+              </Link>
               <Button>
                 View resume <TbExternalLink />
               </Button>
