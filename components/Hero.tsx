@@ -4,17 +4,37 @@ import { TbExternalLink } from "react-icons/tb";
 import Button from "./utility/Button";
 import Tippy from "@tippyjs/react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <section className="h-[100vh] flex items-center">
       <div className="-mt-16">
         <div>
           <h2 className="text-[2.5rem]">
-            <strong className="text-6xl"> Hello, I’m Kenneth.</strong> <br /> A
-            front-end software developer currently focused on building beautiful
-            web interfaces and applications.
+            <motion.strong
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1.2 }}
+              className="text-6xl"
+            >
+              Hello, I’m Kenneth.
+            </motion.strong>
+            <br />
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 1.4 }}
+            >
+              A front-end software developer currently focused on building
+              beautiful web interfaces and applications.
+            </motion.span>
           </h2>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.6 }}
+          >
             <span className="text-3xl flex gap-10 mt-10">
               <Tippy content="Github profile">
                 <a
@@ -45,7 +65,7 @@ const Hero = () => {
                 View resume <TbExternalLink />
               </Button>
             </div>
-          </div>
+          </motion.div>
           <div className="scroll-down"></div>
         </div>
       </div>

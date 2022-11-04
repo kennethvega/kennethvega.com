@@ -2,9 +2,16 @@ import Image from "next/image";
 import React from "react";
 import profile from "../asset/profile.png";
 import Skills from "./Skills";
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className="grid grid-cols-2 mt-10 ">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
+      viewport={{ once: true, amount: 0.5 }}
+      className="grid grid-cols-2 mt-10 "
+    >
       <div>
         <p>
           Hi! I’m Kenneth Vega, I have a{" "}
@@ -29,7 +36,7 @@ const About = () => {
           className="rounded-full"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
