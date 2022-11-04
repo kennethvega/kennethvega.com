@@ -3,7 +3,10 @@ import React from "react";
 import { useModalContext } from "../context/ModalContext";
 const Navbar = () => {
   const { openModal, setOpenModal } = useModalContext();
-
+  const handleModal = () => {
+    setOpenModal(true);
+    document.body.style.overflow = "hidden";
+  };
   return (
     <div className="h-16 max-w-[62rem] mx-auto px-4 flex items-center justify-between ">
       <Link href="/">
@@ -18,7 +21,7 @@ const Navbar = () => {
         <li>
           <Link href="/#about">About</Link>
         </li>
-        <li onClick={() => setOpenModal(true)}>Contact</li>
+        <li onClick={handleModal}>Contact</li>
       </ul>
     </div>
   );

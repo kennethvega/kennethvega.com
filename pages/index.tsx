@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ProjectItem from "../components/ProjectItem";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db, postToJSON } from "../lib/firebase-config";
@@ -9,6 +9,7 @@ import About from "../components/About";
 import CallToAction from "../components/CallToAction";
 import Modal from "../components/utility/Modal";
 import { useModalContext } from "../context/ModalContext";
+import ContactForm from "../components/ContactForm";
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
@@ -39,11 +40,13 @@ export default function Home({ projectData }: ProjectsDataProps) {
           <hr />
           <CallToAction />
         </section>
-        {openModal && (
-          <Modal openModal onClose={() => setOpenModal(false)}>
-            modal
-          </Modal>
-        )}
+        <AnimatePresence>
+          {openModal && (
+            <Modal openModal onClose={() => setOpenModal(false)}>
+              <ContactForm />
+            </Modal>
+          )}
+        </AnimatePresence>
       </>
     </Container>
   );

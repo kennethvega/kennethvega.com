@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.9.0",
     "@tippyjs/react": "^4.2.6",
+    "canvas-confetti": "^1.6.0",
     "firebase": "^9.13.0",
     "framer-motion": "^7.6.4",
     "next": "13.0.1",
@@ -19,6 +21,7 @@
     "swiper": "^8.4.4"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.4.3",
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",

@@ -39,22 +39,19 @@
     @apply px-2 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
   }
 
-  /* li {
-    @apply p-1  text-base rounded-md transition-all duration-300 text-gray-3  hover:text-indigo-700 cursor-pointer;
-  }
-  h1 {
+  /* h1 {
     @apply font-bold text-[150px] tracking-tight leading-tight lg:text-[8rem] xmd:text-[6rem] md:text-[5rem] xsm:text-[3.7rem] xxsm:text-[3rem];
-  }
+  } */
   label {
     @apply flex flex-col w-[30rem] md:w-[25rem];
   }
 
   input {
-    @apply bg-gray-0  h-10 p-2;
+    @apply bg-gray-100  h-10 p-2;
   }
   textarea {
-    @apply bg-gray-0  h-28 p-2;
-  } */
+    @apply bg-gray-100  h-28 p-2;
+  }
 }
 /* grid */
 .grid-cols-2-hero {

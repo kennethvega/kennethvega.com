@@ -46,12 +46,12 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
         className="relative w-auto my-6 mx-auto max-w-3xl bg-white z-50 p-10 rounded"
       >
         <p
-          className="cursor-pointer text-title absolute top-0 right-6"
+          className="cursor-pointer text-4xl absolute top-2 right-6"
           onClick={handleClose}
         >
           &times;
         </p>
-        <div className="">{children}</div>
+        <div>{children}</div>
       </motion.div>
 
       <div
