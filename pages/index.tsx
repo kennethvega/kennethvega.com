@@ -5,6 +5,7 @@ import ProjectItem from "../components/ProjectItem";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
+import About from "../components/About";
 
 export default function Home({ projectData }: ProjectsDataProps) {
   console.log(projectData);
@@ -21,10 +22,11 @@ export default function Home({ projectData }: ProjectsDataProps) {
             <ProjectItem data={data} key={data.name} />
           ))}
         </div>
-        <h3 id="about" className="text-xl font-semibold mb-3">
+        <h3 id="about" className="text-xl font-semibold mb-3 mt-10">
           About me
         </h3>
-        <hr className="mb-10" />
+        <hr />
+        <About />
       </>
     </Container>
   );

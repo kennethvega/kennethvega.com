@@ -36,7 +36,7 @@
     overflow-x: auto;
   }
   li {
-    @apply px-2 text-base cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
+    @apply px-2 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
   }
 
   /* li {
