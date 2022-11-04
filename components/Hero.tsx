@@ -10,9 +10,8 @@ const Hero = () => {
       <div className="-mt-16">
         <div>
           <h2 className="text-[2.5rem] font-medium">
-            <strong> Hello, I’m Kenneth.</strong> <br /> A front-end software
-            developer focused on building beautiful web interfaces and
-            applications.
+            <strong> Hello, I’m Kenneth.</strong> A front-end software developer
+            focused on building beautiful web interfaces and applications.
           </h2>
           <div>
             <span className="text-3xl flex gap-10 mt-10">

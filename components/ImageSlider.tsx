@@ -28,13 +28,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
         {images.map((image, index) => {
           return (
             <SwiperSlide key={index}>
-              <Image
-                src={image}
-                alt="Demo image"
-                layout="responsive"
-                width={535}
-                height={296}
-              />
+              <Image src={image} alt="Demo image" width={699} height={387} />
             </SwiperSlide>
           );
         })}

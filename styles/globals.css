@@ -12,17 +12,12 @@
   padding: 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0 auto;
-  overflow-x: auto;
-}
 @layer base {
   html {
     scrollbar-width: normal;
     scrollbar-color: #777 #555;
     font-size: 95%;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
   }
   html::-webkit-scrollbar {
     width: 0.5vw;
@@ -34,6 +29,11 @@ body {
   }
   html::-webkit-scrollbar-track {
     background-color: #ffff;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    overflow-x: auto;
   }
   li {
     @apply px-2 text-base cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;

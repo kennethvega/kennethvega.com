@@ -24,13 +24,17 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
           </div>
         </div>
         <div className="mt-10 flex gap-4">
-          <Button>
-            Live demo <TbExternalLink />
-          </Button>
-          <Button>
-            Code repo
-            <AiFillGithub />
-          </Button>
+          <a href={data.demo} target="_blank" rel="noopener noreferrer">
+            <Button>
+              Live demo <TbExternalLink />
+            </Button>
+          </a>
+          <a href={data.code} target="_blank" rel="noopener noreferrer">
+            <Button>
+              Code repo
+              <AiFillGithub />
+            </Button>
+          </a>
         </div>
       </div>
       <div>

@@ -12,12 +12,19 @@ export default function Home({ projectData }: ProjectsDataProps) {
     <Container>
       <>
         <Hero />
-        <h3 className="text-xl font-semibold mb-3">Projects</h3>
-        {/* <div className="w-full h-[2px]"></div> */}
-        <hr id="projects" />
-        {projectData?.map((data) => (
-          <ProjectItem data={data} key={data.name} />
-        ))}
+        <h3 id="projects" className="text-xl font-semibold mb-3">
+          Projects
+        </h3>
+        <hr />
+        <div className="flex flex-col gap-8">
+          {projectData?.map((data) => (
+            <ProjectItem data={data} key={data.name} />
+          ))}
+        </div>
+        <h3 id="about" className="text-xl font-semibold mb-3">
+          About me
+        </h3>
+        <hr className="mb-10" />
       </>
     </Container>
   );
