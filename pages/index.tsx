@@ -6,6 +6,7 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import About from "../components/About";
+import CallToAction from "../components/CallToAction";
 
 export default function Home({ projectData }: ProjectsDataProps) {
   console.log(projectData);
@@ -13,20 +14,28 @@ export default function Home({ projectData }: ProjectsDataProps) {
     <Container>
       <>
         <Hero />
-        <h3 id="projects" className="text-xl font-semibold mb-3">
-          Projects
-        </h3>
-        <hr />
-        <div className="flex flex-col gap-8">
-          {projectData?.map((data) => (
-            <ProjectItem data={data} key={data.name} />
-          ))}
-        </div>
-        <h3 id="about" className="text-xl font-semibold mb-3 mt-10">
-          About me
-        </h3>
-        <hr />
-        <About />
+        <section>
+          <h3 id="projects" className="text-xl font-semibold mb-3">
+            Projects
+          </h3>
+          <hr />
+          <div className="flex flex-col gap-8">
+            {projectData?.map((data) => (
+              <ProjectItem data={data} key={data.name} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3 id="about" className="text-xl font-semibold mb-3 mt-10">
+            About me
+          </h3>
+          <hr />
+          <About />
+        </section>
+        <section className="mt-10">
+          <hr />
+          <CallToAction />
+        </section>
       </>
     </Container>
   );

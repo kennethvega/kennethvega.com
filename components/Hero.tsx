@@ -6,7 +6,7 @@ import Tippy from "@tippyjs/react";
 import Link from "next/link";
 const Hero = () => {
   return (
-    <div className="h-[100vh] flex items-center">
+    <section className="h-[100vh] flex items-center">
       <div className="-mt-16">
         <div>
           <h2 className="text-[2.5rem] font-medium">
@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="scroll-down"></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
