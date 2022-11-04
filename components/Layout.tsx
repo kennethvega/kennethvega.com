@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 // import Navbar from "./Navbar";
 // import { useScrollPosition } from "../hooks/useScrollPosition";
@@ -19,7 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
         <Navbar />
       </nav>
       <main>{children}</main>
-      <footer>{/* <Footer /> */}</footer>
+      <footer className="flex flex-col gap-3 justify-center items-center my-4">
+        <Footer />
+      </footer>
     </>
   );
 };
