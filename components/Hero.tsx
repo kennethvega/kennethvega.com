@@ -9,9 +9,10 @@ const Hero = () => {
     <section className="h-[100vh] flex items-center">
       <div className="-mt-16">
         <div>
-          <h2 className="text-[2.5rem] font-medium">
-            <strong> Hello, I’m Kenneth.</strong> A front-end software developer
-            focused on building beautiful web interfaces and applications.
+          <h2 className="text-[2.5rem]">
+            <strong className="text-6xl"> Hello, I’m Kenneth.</strong> <br /> A
+            front-end software developer currently focused on building beautiful
+            web interfaces and applications.
           </h2>
           <div>
             <span className="text-3xl flex gap-10 mt-10">

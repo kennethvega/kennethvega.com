@@ -7,9 +7,12 @@ import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import About from "../components/About";
 import CallToAction from "../components/CallToAction";
+import Modal from "../components/utility/Modal";
+import { useModalContext } from "../context/ModalContext";
 
 export default function Home({ projectData }: ProjectsDataProps) {
-  console.log(projectData);
+  const { openModal, setOpenModal } = useModalContext();
+
   return (
     <Container>
       <>
@@ -36,6 +39,11 @@ export default function Home({ projectData }: ProjectsDataProps) {
           <hr />
           <CallToAction />
         </section>
+        {openModal && (
+          <Modal openModal onClose={() => setOpenModal(false)}>
+            modal
+          </Modal>
+        )}
       </>
     </Container>
   );

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
-
+import { useModalContext } from "../context/ModalContext";
 const Navbar = () => {
+  const { openModal, setOpenModal } = useModalContext();
+
   return (
     <div className="h-16 max-w-[62rem] mx-auto px-4 flex items-center justify-between ">
       <Link href="/">
@@ -16,7 +18,7 @@ const Navbar = () => {
         <li>
           <Link href="/#about">About</Link>
         </li>
-        <li>Contact</li>
+        <li onClick={() => setOpenModal(true)}>Contact</li>
       </ul>
     </div>
   );
