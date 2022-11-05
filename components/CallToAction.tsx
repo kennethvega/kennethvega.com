@@ -27,8 +27,8 @@ const CallToAction = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="text-center mt-3"
       >
-        I would love to hear from you. Whether it’s a project, job opportunity,{" "}
-        <br /> or just a chat. Feel free to contact me.
+        I would love to hear from you. Whether it’s a project, a job
+        opportunity, <br /> or just a chat. Feel free to contact me.
       </motion.p>
       <motion.p
         initial={{ opacity: 0, y: 50 }}

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Button from "./utility/Button";
-import emailjs from "@emailjs/browser";
+
 import { useModalContext } from "../context/ModalContext";
 import { runFireWorks } from "../lib/confetti";
 import LoadingButton from "./utility/LoadingButton";
@@ -9,8 +9,17 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [error, setError] = useState<string | null>();
+  const [name, setName] = useState<
+    string | number | readonly string[] | undefined
+  >("");
+  const [email, setEmail] = useState<
+    string | number | readonly string[] | undefined
+  >("");
+  const [message, setMessage] = useState<
+    string | number | readonly string[] | undefined
+  >("");
   const { setOpenModal } = useModalContext();
-  const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
+
   const handleClose = (e: React.SyntheticEvent) => {
     e.preventDefault();
     setOpenModal(false);
@@ -18,49 +27,32 @@ const ContactForm = () => {
   };
   const sendEmail = (e: any) => {
     e.preventDefault();
-    setLoading(true);
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID!,
-        "template_s9jcvpc",
-        form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          setLoading(false);
-          setIsEmailSent(true);
-          runFireWorks();
-        },
-        (error) => {
-          console.log(error.text);
-          setError(error.text);
-        }
-      );
   };
 
   return (
     <>
       {!isEmailSent ? (
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
+        <form onSubmit={sendEmail} className="flex flex-col gap-5">
           <h3 className="text-xl font-semibold">Get in touch</h3>
           <label>
             <span>Name</span>
             <input
               type="text"
-              name="user_name"
+              name="name"
               placeholder="Your name"
               required
-              autoComplete="on"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </label>
           <label>
             <span>Email</span>
             <input
               type="email"
+              name="email"
               placeholder="Your email"
-              name="user_email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </label>
@@ -69,8 +61,9 @@ const ContactForm = () => {
             <textarea
               name="message"
               placeholder="Your message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
-              autoComplete="on"
             />
           </label>
           {loading ? (
@@ -82,7 +75,7 @@ const ContactForm = () => {
           )}
           {error && <p className="text-red-600">{error}</p>}
           <p>
-            Or use gmail &rarr;{" "}
+            Or use this &rarr;{" "}
             <a
               className="underline cursor-pointer"
               href="mailto:kenneth.trinidad.vega@gmail.com"

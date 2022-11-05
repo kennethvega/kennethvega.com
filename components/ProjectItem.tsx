@@ -21,7 +21,7 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
     >
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-3">
-          <h3 className="text-4xl font-semibold">{data.name}</h3>
+          <h3 className="text-4xl font-bold">{data.name}</h3>
           <p>{data.description}</p>
           <div className="mt-5 flex text-sm gap-4 text-gray-500 flex-wrap">
             {data.tools.map((tool) => (

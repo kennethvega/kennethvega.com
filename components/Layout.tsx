@@ -16,9 +16,9 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <nav className="sticky top-0 bg-white bg-opacity-60 backdrop-blur-md z-50">
+      <div className="sticky top-0 bg-white bg-opacity-60 backdrop-blur-md z-50 ">
         <Navbar />
-      </nav>
+      </div>
       <main>{children}</main>
       <footer className="flex flex-col gap-3 justify-center items-center my-4">
         <Footer />

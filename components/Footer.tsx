@@ -27,7 +27,9 @@ const Footer = () => {
           </a>
         </Tippy>
       </div>
-      <p className="text-gray-500">Built and designed by Kenneth Vega</p>
+      <p className="text-gray-500 text-sm">
+        Built and designed by Kenneth Vega
+      </p>
     </>
   );
 };

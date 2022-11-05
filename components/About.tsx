@@ -12,15 +12,14 @@ const About = () => {
       viewport={{ once: true, amount: 0.5 }}
       className="grid grid-cols-2 mt-10 "
     >
-      <div>
+      <div className="text-base">
         <p>
           Hi! I’m Kenneth Vega, I have a{" "}
           <strong>
             passion in designing, learning and building things for the web
           </strong>
-          . I like to resolve design problems and create{" "}
-          <strong> interactive interface </strong>, developing web experiences &{" "}
-          <strong>web applications</strong>.
+          . I like to resolve design problems and create interactive interface,{" "}
+          <strong>developing web experiences & web applications</strong>.
         </p>
         <div className="my-3">
           Here are the technologies I’ve been working with.

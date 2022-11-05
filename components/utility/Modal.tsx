@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { motion } from "framer-motion";
+import Overlay from "./Overlay";
 
 type ModalProps = {
   openModal: boolean;
@@ -54,10 +55,8 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
         <div>{children}</div>
       </motion.div>
 
-      <div
-        onClick={handleClose}
-        className="opacity-25 fixed inset-0 z-10 bg-black"
-      ></div>
+    
+      <Overlay handleClose={handleClose} />
     </div>
   ) : null;
 

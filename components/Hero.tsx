@@ -11,27 +11,28 @@ const Hero = () => {
     <section className="h-[100vh] flex items-center">
       <div className="-mt-16">
         <div>
-          <h2 className="text-[2.5rem]">
+          <h2 className="text-[2rem]">
             <motion.strong
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1.2 }}
               className="text-6xl"
             >
-              Hello, I’m Kenneth.
+              {/* Hello, I’m Kenneth. */}
+              Hello, I am Name.
             </motion.strong>
             <br />
             <motion.span
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1.4 }}
             >
-              A front-end software developer currently focused on building
-              beautiful web interfaces and applications.
+              A front-end software engineer, currently focused on building
+              beautiful web interfaces and web applications.
             </motion.span>
           </h2>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 1.6 }}
           >
@@ -66,7 +67,12 @@ const Hero = () => {
               </Button>
             </div>
           </motion.div>
-          <div className="scroll-down"></div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 1.6 }}
+            className="scroll-down"
+          ></motion.div>
         </div>
       </div>
     </section>

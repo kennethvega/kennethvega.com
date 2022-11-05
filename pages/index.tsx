@@ -29,10 +29,9 @@ export default function Home({ projectData }: ProjectsDataProps) {
             ))}
           </div>
         </section>
+        <div id="about" className="mb-20" />
         <section>
-          <h3 id="about" className="text-xl font-semibold mb-3 mt-10">
-            About me
-          </h3>
+          <h3 className="text-xl font-semibold mb-3 mt-10">About me</h3>
           <hr />
           <About />
         </section>
