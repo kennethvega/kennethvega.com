@@ -136,9 +136,9 @@ const ContactForm = () => {
             Thank you for getting in touch! I will respond to you as soon as
             possible.
           </p>
-          <p className="text-center mt-10">
-            <Button onClick={handleClose}>Okay✔️</Button>
-          </p>
+          <Button onClick={handleClose}>
+            <p className="text-center mt-10">Okay✔️</p>
+          </Button>
         </div>
       )}
     </>
