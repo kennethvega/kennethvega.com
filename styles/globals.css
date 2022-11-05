@@ -19,6 +19,13 @@
 
     scroll-behavior: smooth !important;
   }
+
+  @media (max-width: 375px) {
+    html {
+      font-size: 80%;
+    }
+  }
+
   html::-webkit-scrollbar {
     width: 0.5vw;
     height: 10px;
@@ -43,7 +50,7 @@
     @apply font-bold text-[150px] tracking-tight leading-tight lg:text-[8rem] xmd:text-[6rem] md:text-[5rem] xsm:text-[3.7rem] xxsm:text-[3rem];
   } */
   label {
-    @apply flex flex-col w-[30rem] md:w-[25rem];
+    @apply flex flex-col w-[30rem] md:w-[25rem]  xxsm:w-[20rem];
   }
 
   input {
@@ -183,11 +190,26 @@
 .swiper-button-prev::after {
   font-size: 1.5rem !important;
 }
-
-.nav-menu {
-  transform: translateX(100%);
-  transition: transform 300ms ease;
+/* mobile navigation */
+@media (max-width: 47.938em) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    background-color: white;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    gap: 3rem;
+    z-index: 40;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+    font-size: 1.5rem;
+  }
+  .active {
+    transform: translateX(0%);
+  }
 }
-.open {
-  transform: translateX(0) !important;
+
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
 }

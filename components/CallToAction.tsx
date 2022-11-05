@@ -16,7 +16,7 @@ const CallToAction = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
         viewport={{ once: true, amount: 1 }}
-        className="mt-24 text-6xl font-bold text-center"
+        className="mt-24 text-6xl md:text-4xl font-bold text-center"
       >
         Say hi to Kenneth.
       </motion.h2>

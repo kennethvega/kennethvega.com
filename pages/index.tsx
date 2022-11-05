@@ -11,6 +11,7 @@ import Modal from "../components/utility/Modal";
 import { useModalContext } from "../context/ModalContext";
 import ContactForm from "../components/ContactForm";
 
+
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
 

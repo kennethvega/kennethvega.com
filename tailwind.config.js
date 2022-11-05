@@ -7,24 +7,24 @@ module.exports = {
   ],
   theme: {
     screens: {
-      "2xl": "1535px",
+      "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
 
-      xl: "1279px",
+      xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
 
-      lg: "1137px",
+      lg: { max: "1137px" },
       // => @media (max-width: 1023px) { ... }
 
-      xmd: "920px",
+      xmd: { max: "920px" },
 
-      md: "767px",
+      md: { max: "767px" },
       // => @media (max-width: 767px) { ... }
 
-      sm: "639px",
+      sm: { max: "639px" },
       // => @media (max-width: 639px) { ... }
-      xsm: "582px",
-      xxsm: "448px",
+      xsm: { max: "582px" },
+      xxsm: { max: "485px" },
     },
     extend: {},
   },

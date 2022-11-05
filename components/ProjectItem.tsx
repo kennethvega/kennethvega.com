@@ -17,11 +17,11 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
       viewport={{ once: true, amount: 0.5 }}
-      className="grid grid-cols-2 mt-10 gap-2 mb-10"
+      className="grid grid-cols-2 mt-10 gap-2 mb-10 xmd:grid-cols-1 xmd:justify-center xmd:items-center"
     >
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-3">
-          <h3 className="text-4xl font-bold">{data.name}</h3>
+          <h3 className="text-4xl font-bold md:text-2xl">{data.name}</h3>
           <p>{data.description}</p>
           <div className="mt-5 flex text-sm gap-4 text-gray-500 flex-wrap">
             {data.tools.map((tool) => (

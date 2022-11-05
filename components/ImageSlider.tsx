@@ -15,7 +15,7 @@ type ImageSliderProps = {
 
 const ImageSlider = ({ images }: ImageSliderProps) => {
   return (
-    <div className="w-full border-2 rounded-md">
+    <div className="bg-cover border-2 rounded-md flex justify-center items-center xmd:max-w-[42rem]">
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

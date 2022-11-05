@@ -44,7 +44,7 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
             duration: 0.3,
           },
         }}
-        className="relative w-auto my-6 mx-auto max-w-3xl bg-white z-50 p-10 rounded"
+        className="relative w-auto my-6 mx-auto max-w-3xl xsm:mx-0 bg-white z-50 p-10 xsm:p-2 rounded"
       >
         <p
           className="cursor-pointer text-4xl absolute top-2 right-6"
@@ -55,7 +55,6 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
         <div>{children}</div>
       </motion.div>
 
-    
       <Overlay handleClose={handleClose} />
     </div>
   ) : null;

@@ -10,7 +10,7 @@ const About = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.2 }}
       viewport={{ once: true, amount: 0.5 }}
-      className="grid grid-cols-2 mt-10 "
+      className="grid grid-cols-2 mt-10 md:grid-cols-1 md:gap-10"
     >
       <div className="text-base">
         <p>

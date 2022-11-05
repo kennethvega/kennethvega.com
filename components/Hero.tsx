@@ -8,29 +8,29 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="h-[100vh] flex items-center">
-      <div className="-mt-16">
+    <section className="h-[100vh] flex items-center justify-center">
+      <div className="-mt-16 md:-mt-20">
         <div>
-          <h2 className="text-[2rem]">
+          <h2 className="text-6xl md:text-5xl sm:text-3xl">
             <motion.strong
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 1.2 }}
-              className="text-6xl"
             >
-              {/* Hello, I’m Kenneth. */}
-              Hello, I am Name.
+              Hello, I’m Kenneth.
             </motion.strong>
-            <br />
-            <motion.span
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 1.4 }}
-            >
-              A front-end software engineer, currently focused on building
-              beautiful web interfaces and web applications.
-            </motion.span>
           </h2>
+          <br />
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 1.4 }}
+            className="text-[2rem] md:text-2xl sm:text-lg"
+          >
+            A front-end software engineer, currently focused on building
+            beautiful web interfaces and web applications.
+          </motion.span>
+
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,89 +1,109 @@
-import Link from "next/link";
+import Hamburger, { Divide } from "hamburger-react";
 import React, { useState } from "react";
-import { useModalContext } from "../context/ModalContext";
-import { motion } from "framer-motion";
-import Hamburger from "hamburger-react";
-
+import { useScrollPosition } from "../hooks/useScrollPosition";
 import Overlay from "./utility/Overlay";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useModalContext } from "../context/ModalContext";
+import Tippy from "@tippyjs/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import MobileMenu from "./MobileMenu";
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const { setOpenModal } = useModalContext();
   const handleModal = () => {
     setOpenModal(true);
     document.body.style.overflow = "hidden";
+    setIsOpen(false);
   };
+  const scrollPosition = useScrollPosition();
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="h-16 max-w-[62rem] mx-auto px-4 flex items-center justify-between relative overflow-hidden">
-      <Link href="/">
+    <div
+      className={classNames(
+        scrollPosition > 100 ? "shadow" : "shadow-none",
+        `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
+      )}
+    >
+      <header
+        className={`primary-header flex max-w-[62rem] px-5 sm:px-3 h-20 mx-auto `}
+      >
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0 }}
-          className="px-2 font-bold text-xl cursor-pointer rounded-md hover:bg-gray-200"
+          transition={{ duration: 0.3 }}
+          className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 rounded-md"
         >
-          {/* KENNETH VEGA */}NAME
+          <Link href="/">KENNETH VEGA</Link>
         </motion.h1>
-      </Link>
-      <nav className={`hidden md:flex`}>
-        <ul className="flex gap-6">
-          <motion.li
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            <Link href="/#projects">Projects</Link>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <Link href="/#about">About</Link>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.3 }}
-            onClick={handleModal}
-          >
-            Contact
-          </motion.li>
-        </ul>
-      </nav>
-
-      {/* hamburger menu */}
-      <div className="md:hidden flex z-50 ">
-        <Hamburger toggled={isOpen} toggle={setIsOpen} />
-      </div>
-      {/* mobile menu*/}
-      {/* <MobileMenu isOpen={isOpen} /> */}
-      {/* <div>
-        <div
-          className={`hidden xmd:flex justify-center items-center  fixed inset-y-0 right-0 w-[75vw] h-[100vh] bg-white z-40 nav ${
-            isOpen ? "nav-active" : "nav-not-active"
-          }`}
+        <button
+          className=" hidden md:flex z-50 mobile-nav-toggle absolute top-4 right-4"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
         >
-          <ul className="flex flex-col justify-center gap-14 text-2xl">
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Resume</li>
-            <div className="flex justify-center gap-8">
-              <span className="text-4xl">
-                <AiFillGithub />
-              </span>
-              <span className="text-4xl">
-                <AiFillLinkedin />
-              </span>
-            </div>
+          <Hamburger toggled={isOpen} toggle={setIsOpen} />
+        </button>
+        <nav>
+          <ul
+            id="primary-navigation"
+            className={`${
+              isOpen ? "active" : ""
+            } primary-navigation flex justify-center items-center gap-7 text-sm`}
+          >
+            <motion.li
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href="/#projects">Projects</Link>
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              onClick={() => setIsOpen(false)}
+            >
+              <Link href="/#about">About</Link>
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
+              onClick={handleModal}
+            >
+              Contact
+            </motion.li>
+            {isOpen && (
+              <div className="flex gap-8 text-3xl">
+                <Tippy content="Github profile">
+                  <a
+                    href="https://github.com/kennethvega"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </Tippy>
+                <Tippy content="Linkedin profile">
+                  <a
+                    href="https://www.linkedin.com/in/kenneth-vega-5bb9b3237/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer"
+                  >
+                    <AiFillLinkedin />
+                  </a>
+                </Tippy>
+              </div>
+            )}
           </ul>
-        </div>
-      </div> */}
-
-      <MobileMenu isOpen={isOpen} />
-      {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
+        </nav>
+        {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
+      </header>
     </div>
   );
 };

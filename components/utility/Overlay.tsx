@@ -7,7 +7,7 @@ const Overlay = ({ handleClose }: OutlineProps) => {
   return (
     <div
       onClick={handleClose}
-      className="opacity-40 fixed inset-0 z-10 bg-black top-0 left-0  w-[100vw] h-[100vh] backdrop-blur-sm"
+      className="opacity-60 fixed inset-0 z-10 bg-black top-0 left-0  w-[100vw] h-[100vh]"
     ></div>
   );
 };

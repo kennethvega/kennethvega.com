@@ -32,7 +32,10 @@ const ContactForm = () => {
   return (
     <>
       {!isEmailSent ? (
-        <form onSubmit={sendEmail} className="flex flex-col gap-5">
+        <form
+          onSubmit={sendEmail}
+          className="flex flex-col gap-5 xsm:items-center"
+        >
           <h3 className="text-xl font-semibold">Get in touch</h3>
           <label>
             <span>Name</span>
