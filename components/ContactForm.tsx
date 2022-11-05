@@ -5,19 +5,24 @@ import { useModalContext } from "../context/ModalContext";
 import { runFireWorks } from "../lib/confetti";
 import LoadingButton from "./utility/LoadingButton";
 import { SiMinutemailer } from "react-icons/si";
+import { validate } from "../utils/validate";
+
+interface IValues {
+  name: string;
+  email: string;
+  message: string;
+}
+interface IErrors extends Partial<IValues> {}
 const ContactForm = () => {
+  const [values, setValues] = useState<IValues>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<IErrors>({});
   const [loading, setLoading] = useState(false);
   const [isEmailSent, setIsEmailSent] = useState(false);
-  const [error, setError] = useState<string | null>();
-  const [name, setName] = useState<
-    string | number | readonly string[] | undefined
-  >("");
-  const [email, setEmail] = useState<
-    string | number | readonly string[] | undefined
-  >("");
-  const [message, setMessage] = useState<
-    string | number | readonly string[] | undefined
-  >("");
+
   const { setOpenModal } = useModalContext();
 
   const handleClose = (e: React.SyntheticEvent) => {
@@ -25,48 +30,85 @@ const ContactForm = () => {
     setOpenModal(false);
     document.body.style.overflow = "unset";
   };
-  const sendEmail = (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const errors = validate(values);
+    if (errors && Object.keys(errors).length > 0) {
+      return setErrors(errors);
+    }
+    setErrors({});
+    setLoading(true);
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (res.ok) {
+        setValues({ name: "", email: "", message: "" });
+        setIsEmailSent(true);
+        runFireWorks();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    setLoading(false);
+  };
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setValues((prevInput) => ({
+      ...prevInput,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
     <>
       {!isEmailSent ? (
         <form
-          onSubmit={sendEmail}
+          onSubmit={handleSubmit}
           className="flex flex-col gap-5 xsm:items-center"
         >
           <h3 className="text-xl font-semibold">Get in touch</h3>
-          <label>
+          <label htmlFor="name">
             <span>Name</span>
             <input
               type="text"
               name="name"
               placeholder="Your name"
               required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              id="name"
+              value={values.name}
+              onChange={handleChange}
             />
           </label>
-          <label>
+          <label htmlFor="email">
             <span>Email</span>
             <input
+              id="email"
               type="email"
               name="email"
               placeholder="Your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
+              value={values.email}
+              onChange={handleChange}
             />
           </label>
-          <label className="mb-1">
+          <label htmlFor="message" className="mb-1">
             <span>Message</span>
             <textarea
               name="message"
               placeholder="Your message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
               required
+              value={values.message}
+              onChange={handleChange}
+              id="message"
             />
           </label>
           {loading ? (
@@ -76,7 +118,7 @@ const ContactForm = () => {
               Send <SiMinutemailer />
             </Button>
           )}
-          {error && <p className="text-red-600">{error}</p>}
+          {/* {error && <p className="text-red-600">{error}</p>} */}
           <p>
             Or use this &rarr;{" "}
             <a
@@ -95,7 +137,7 @@ const ContactForm = () => {
             possible.
           </p>
           <p className="text-center mt-10">
-            <Button onClick={handleClose}>Close</Button>
+            <Button onClick={handleClose}>Okay✔️</Button>
           </p>
         </div>
       )}

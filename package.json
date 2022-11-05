@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "@tippyjs/react": "^4.2.6",
     "canvas-confetti": "^1.6.0",
+    "dotenv": "^16.0.3",
     "firebase": "^9.13.0",
     "framer-motion": "^7.6.4",
     "hamburger-react": "^2.5.0",
