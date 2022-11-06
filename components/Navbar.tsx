@@ -34,7 +34,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 rounded-md"
+          className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 py-1 rounded-md"
         >
           <Link href="/">KENNETH VEGA</Link>
         </motion.h1>

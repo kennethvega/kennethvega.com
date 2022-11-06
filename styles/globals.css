@@ -43,12 +43,9 @@
     font-family: "Poppins", sans-serif;
   }
   li {
-    @apply px-2 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
+    @apply px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
   }
 
-  /* h1 {
-    @apply font-bold text-[150px] tracking-tight leading-tight lg:text-[8rem] xmd:text-[6rem] md:text-[5rem] xsm:text-[3.7rem] xxsm:text-[3rem];
-  } */
   label {
     @apply flex flex-col w-[30rem] md:w-[25rem]  xxsm:w-[20rem];
   }
