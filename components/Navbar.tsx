@@ -42,6 +42,7 @@ const Navbar = () => {
           className=" hidden md:flex z-50 mobile-nav-toggle absolute top-4 right-4"
           aria-controls="primary-navigation"
           aria-expanded="false"
+          aria-label="button"
         >
           <Hamburger toggled={isOpen} toggle={setIsOpen} />
         </button>
