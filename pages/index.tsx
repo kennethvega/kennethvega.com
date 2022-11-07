@@ -7,11 +7,11 @@ import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import { useModalContext } from "../context/ModalContext";
 import dynamic from "next/dynamic";
 import Modal from "../components/utility/Modal";
-import ContactForm from "../components/ContactForm";
 // dynamic imports
 const ProjectItem = dynamic(() => import("../components/ProjectItem"));
 const About = dynamic(() => import("../components/About"));
 const CallToAction = dynamic(() => import("../components/CallToAction"));
+const ContactForm = dynamic(() => import("../components/ContactForm"));
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();

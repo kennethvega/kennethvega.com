@@ -44,7 +44,11 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="button"
         >
-          <Hamburger toggled={isOpen} toggle={setIsOpen} />
+          <Hamburger
+            toggled={isOpen}
+            toggle={setIsOpen}
+            aria-label={"mobile menu navigation button"}
+          />
         </button>
         <nav>
           <ul
