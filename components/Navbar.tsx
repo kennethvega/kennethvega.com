@@ -36,7 +36,9 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 py-1 rounded-md"
         >
-          <Link href="/">KENNETH VEGA</Link>
+          <Link href="/" aria-label="logo">
+            KENNETH VEGA
+          </Link>
         </motion.h1>
         <button
           className=" hidden md:flex z-50 mobile-nav-toggle absolute top-4 right-4"
@@ -47,7 +49,7 @@ const Navbar = () => {
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}
-            aria-label={"mobile menu navigation button"}
+            aria-label="mobile menu navigation button"
           />
         </button>
         <nav>
