@@ -4,12 +4,12 @@ import { DocumentSnapshot, getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_API_KEY,
-  authDomain: "minimalist-portfolio-74074.firebaseapp.com",
-  projectId: "minimalist-portfolio-74074",
-  storageBucket: "minimalist-portfolio-74074.appspot.com",
-  messagingSenderId: "1094049568737",
-  appId: "1:1094049568737:web:7a6f2ab52be857db5824a0",
+  apiKey: "AIzaSyBo6uHbHWXBRTL4OMUaD3ulHowHJOWOnR0",
+  authDomain: "my-portfolio-d50af.firebaseapp.com",
+  projectId: "my-portfolio-d50af",
+  storageBucket: "my-portfolio-d50af.appspot.com",
+  messagingSenderId: "199260778708",
+  appId: "1:199260778708:web:7cd56fb0f11db8399ccb41",
 };
 
 // Initialize Firebase
