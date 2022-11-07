@@ -2,15 +2,11 @@ import React, { ReactNode } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-// import { useScrollPosition } from "../hooks/useScrollPosition";
-// import Footer from "./Footer";
 
 type LayoutProps = {
   children: ReactNode;
 };
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+
 const Layout = ({ children }: LayoutProps) => {
   // const scrollPosition = useScrollPosition();
 

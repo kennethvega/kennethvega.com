@@ -7,7 +7,7 @@ sgMail.setApiKey(process.env.SG_API_KEY!);
 type Data = {
   success: boolean;
 };
-export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const send = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   if (req.method === "POST") {
     const {
       name,
@@ -32,3 +32,4 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     }
   }
 };
+export default send;

@@ -7,7 +7,6 @@ export type ProjectsItem = {
   description: string;
   code: string;
   demo: string;
-  figma: string;
   tools: string[];
   images: string[];
 };

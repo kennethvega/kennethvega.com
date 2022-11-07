@@ -1,16 +1,17 @@
 import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
 import { AnimatePresence, motion } from "framer-motion";
-import ProjectItem from "../components/ProjectItem";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
-import About from "../components/About";
-import CallToAction from "../components/CallToAction";
-import Modal from "../components/utility/Modal";
 import { useModalContext } from "../context/ModalContext";
+import dynamic from "next/dynamic";
+import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
-
+// dynamic imports
+const ProjectItem = dynamic(() => import("../components/ProjectItem"));
+const About = dynamic(() => import("../components/About"));
+const CallToAction = dynamic(() => import("../components/CallToAction"));
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
