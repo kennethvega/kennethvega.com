@@ -63,7 +63,9 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               onClick={() => setIsOpen(false)}
             >
-              <Link href="/#projects">Projects</Link>
+              <Link href="/#projects" aria-label="kenneth vega projects">
+                Projects
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0, y: -30 }}
@@ -71,7 +73,9 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               onClick={() => setIsOpen(false)}
             >
-              <Link href="/#about">About</Link>
+              <Link href="/#about" aria-label="kenneth vega about">
+                About
+              </Link>
             </motion.li>
             <motion.li
               initial={{ opacity: 0, y: -30 }}
@@ -89,6 +93,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer"
+                    aria-label="github link"
                   >
                     <AiFillGithub />
                   </a>
@@ -99,6 +104,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer"
+                    aria-label="linkedin link"
                   >
                     <AiFillLinkedin />
                   </a>

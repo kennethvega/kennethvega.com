@@ -30,12 +30,22 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
           </div>
         </div>
         <div className="mt-10 flex gap-4">
-          <a href={data.demo} target="_blank" rel="noopener noreferrer">
+          <a
+            href={data.demo}
+            target="_blank"
+            rel="noopener noreferrer "
+            aria-label="demo"
+          >
             <Button>
               Live demo <TbExternalLink />
             </Button>
           </a>
-          <a href={data.code} target="_blank" rel="noopener noreferrer">
+          <a
+            href={data.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="code repository"
+          >
             <Button>
               Code repo
               <AiFillGithub />

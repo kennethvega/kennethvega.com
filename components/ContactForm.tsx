@@ -118,12 +118,13 @@ const ContactForm = () => {
               Send <SiMinutemailer />
             </Button>
           )}
-          {/* {error && <p className="text-red-600">{error}</p>} */}
+
           <p>
             Or use this &rarr;{" "}
             <a
               className="underline cursor-pointer"
               href="mailto:kenneth.trinidad.vega@gmail.com"
+              aria-label="kenneth vega gmail"
             >
               kenneth.trinidad.vega@gmail.com
             </a>
