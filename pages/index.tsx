@@ -53,12 +53,7 @@ export default function Home({ projectData }: ProjectsDataProps) {
   );
 }
 
-export const getServerSideProps = async ({ req, res }: any) => {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
-
+export const getStaticProps = async () => {
   const projectQuery = query(collection(db, "projects"));
   const querySnapshot = await getDocs(projectQuery);
   const projectData = querySnapshot.docs.map(postToJSON);
