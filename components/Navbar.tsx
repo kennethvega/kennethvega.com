@@ -1,4 +1,4 @@
-import Hamburger, { Divide } from "hamburger-react";
+import Hamburger from "hamburger-react";
 import React, { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Overlay from "./utility/Overlay";

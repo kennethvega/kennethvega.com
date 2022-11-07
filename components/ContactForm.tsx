@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Button from "./utility/Button";
 
 import { useModalContext } from "../context/ModalContext";

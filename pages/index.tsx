@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
