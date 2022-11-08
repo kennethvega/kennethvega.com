@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  // Built by Kenneth Vega
   return (
     <section className="h-[100vh] flex items-center justify-center">
       <div className="-mt-16 md:-mt-20">
