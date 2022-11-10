@@ -87,32 +87,31 @@ const Navbar = () => {
             >
               Contact
             </motion.li>
-            {isOpen && (
-              <div className="flex gap-8 text-3xl">
-                <Tippy content="Github profile">
-                  <a
-                    href="https://github.com/kennethvega"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer"
-                    aria-label="github link"
-                  >
-                    <AiFillGithub />
-                  </a>
-                </Tippy>
-                <Tippy content="Linkedin profile">
-                  <a
-                    href="https://www.linkedin.com/in/kenneth-vega-5bb9b3237/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer"
-                    aria-label="linkedin link"
-                  >
-                    <AiFillLinkedin />
-                  </a>
-                </Tippy>
-              </div>
-            )}
+
+            <div className="hidden md:flex gap-8 text-3xl ">
+              <Tippy content="Github profile">
+                <a
+                  href="https://github.com/kennethvega"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                  aria-label="github link"
+                >
+                  <AiFillGithub />
+                </a>
+              </Tippy>
+              <Tippy content="Linkedin profile">
+                <a
+                  href="https://www.linkedin.com/in/kenneth-vega-5bb9b3237/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                  aria-label="linkedin link"
+                >
+                  <AiFillLinkedin />
+                </a>
+              </Tippy>
+            </div>
           </ul>
         </nav>
         {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
