@@ -30,16 +30,16 @@ const Navbar = () => {
       <header
         className={`primary-header flex max-w-[62rem] px-5 sm:px-3 h-20 mx-auto `}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 py-1 rounded-md"
-        >
-          <Link href="/" aria-label="logo">
+        <Link href="/" aria-label="logo">
+          <motion.h1
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="logo font-bold cursor-pointer hover:bg-gray-200 px-2 py-1 rounded-md"
+          >
             KENNETH VEGA
-          </Link>
-        </motion.h1>
+          </motion.h1>
+        </Link>
         <button
           className=" hidden md:flex z-50 mobile-nav-toggle absolute top-4 right-4"
           aria-controls="primary-navigation"
@@ -59,26 +59,26 @@ const Navbar = () => {
               isOpen ? "active" : ""
             } primary-navigation flex justify-center items-center gap-7 text-sm`}
           >
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              onClick={() => setIsOpen(false)}
-            >
-              <Link href="/#projects" aria-label="kenneth vega projects">
+            <Link href="/#projects" aria-label="kenneth vega projects">
+              <motion.li
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                onClick={() => setIsOpen(false)}
+              >
                 Projects
-              </Link>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.2 }}
-              onClick={() => setIsOpen(false)}
-            >
-              <Link href="/#about" aria-label="kenneth vega about">
+              </motion.li>
+            </Link>
+            <Link href="/#about" aria-label="kenneth vega about">
+              <motion.li
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                onClick={() => setIsOpen(false)}
+              >
                 About
-              </Link>
-            </motion.li>
+              </motion.li>
+            </Link>
             <motion.li
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
