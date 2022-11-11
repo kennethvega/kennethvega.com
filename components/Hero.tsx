@@ -65,11 +65,10 @@ const Hero = () => {
               <Link href="/#projects">
                 <Button>Look at my work &#8595;</Button>
               </Link>
-              <Tippy content="not available yet">
-                <Button>
-                  View resume <TbExternalLink />
-                </Button>
-              </Tippy>
+
+              <Button>
+                View resume <TbExternalLink />
+              </Button>
             </div>
           </motion.div>
           <motion.div
