@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 const Footer = () => {
   return (
     <>
-      <div className="text-xl flex gap-10 mt-24 text-gray-500">
+      <div className="text-xl flex gap-5 mt-24 text-gray-500">
         <Tippy content="Github profile">
           <a
             href="https://github.com/kennethvega"
