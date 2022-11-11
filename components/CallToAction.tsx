@@ -44,16 +44,18 @@ const CallToAction = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.6 }}
         viewport={{ once: true, amount: 0.5 }}
-        className="flex items-center justify-center mt-10"
+        className="flex items-center justify-center mt-10 "
       >
-        <a>
-          <Button onClick={handleModal}>
+        <Button onClick={handleModal}>
+          <p className="px-2 py-1 flex items-center justify-center">
             Email <SiMinutemailer />
-          </Button>
-        </a>
+          </p>
+        </Button>
       </motion.div>
     </>
   );
 };
 
 export default CallToAction;
+// className =
+//   "px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300";

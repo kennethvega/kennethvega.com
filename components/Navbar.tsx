@@ -84,8 +84,9 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
               onClick={handleModal}
+              className="px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300"
             >
-              <a>Contact</a>
+              Contact
             </motion.li>
 
             <div className="hidden md:flex gap-8 text-3xl ">
