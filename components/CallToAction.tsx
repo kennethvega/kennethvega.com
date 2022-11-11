@@ -46,9 +46,11 @@ const CallToAction = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="flex items-center justify-center mt-10"
       >
-        <Button onClick={handleModal}>
-          Email <SiMinutemailer />
-        </Button>
+        <a>
+          <Button onClick={handleModal}>
+            Email <SiMinutemailer />
+          </Button>
+        </a>
       </motion.div>
     </>
   );
