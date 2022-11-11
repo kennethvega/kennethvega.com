@@ -85,7 +85,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.3 }}
               onClick={handleModal}
             >
-              Contact
+              <a>Contact</a>
             </motion.li>
 
             <div className="hidden md:flex gap-8 text-3xl ">
