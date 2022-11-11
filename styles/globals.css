@@ -42,10 +42,10 @@
     overflow-x: hidden !important;
     font-family: "Poppins", sans-serif;
   }
-  li {
+
+  a {
     @apply px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
   }
-
   label {
     @apply flex flex-col w-[30rem] md:w-[25rem]  xxsm:w-[20rem];
   }
