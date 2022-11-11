@@ -37,7 +37,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 1.6 }}
           >
-            <span className="text-3xl flex gap-10 mt-10">
+            <span className="text-3xl flex gap-10 mt-10 ">
               <Tippy content="Github profile">
                 <a
                   href="https://github.com/kennethvega"
@@ -61,7 +61,7 @@ const Hero = () => {
                 </a>
               </Tippy>
             </span>
-            <div className="mt-16 flex gap-10">
+            <div className="mt-16 flex gap-10 sm:gap-5 xsm:gap-3">
               <Link href="/#projects">
                 <Button>Look at my work &#8595;</Button>
               </Link>

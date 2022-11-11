@@ -112,13 +112,19 @@ const ContactForm = () => {
             />
           </label>
           {loading ? (
-            <LoadingButton />
+            <p className="px-2 py-1 flex items-center justify-center">
+              <LoadingButton />
+            </p>
           ) : (
             <Button type="submit">
-              Send <SiMinutemailer />
+              <p className="px-2 py-1 flex items-center justify-center">
+                Send <SiMinutemailer />
+              </p>
             </Button>
           )}
-
+          {/* <p className="px-2 py-1 flex items-center justify-center">
+            Email <SiMinutemailer />
+          </p> */}
           <p>
             Or use this &rarr;{" "}
             <a
