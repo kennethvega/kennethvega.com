@@ -5,7 +5,7 @@ const LoadingButton = () => {
     <button
       disabled
       type="button"
-      className=" transition-all duration-500 ease py-3 text-black bg-gray-200 rounded"
+      className=" transition-all duration-500 ease py-2 text-black bg-gray-200 rounded w-full"
     >
       Sending{" "}
       <svg
