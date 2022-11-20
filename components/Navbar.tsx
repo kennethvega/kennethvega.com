@@ -28,7 +28,7 @@ const Navbar = () => {
       )}
     >
       <header
-        className={`primary-header flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto `}
+        className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center`}
       >
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
         </motion.h1>
         <button
-          className=" hidden md:flex z-50 mobile-nav-toggle absolute top-4 right-4"
+          className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
           aria-controls="primary-navigation"
           aria-expanded="false"
           aria-label="button"
