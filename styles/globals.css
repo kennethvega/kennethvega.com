@@ -67,17 +67,17 @@
   border: 2px solid #7c7c7c;
   border-radius: 1.5rem;
   bottom: 2rem;
-  height: 3rem;
+  height: 40px;
   left: 0;
   margin: 0 auto;
   position: absolute;
   right: 0;
-  width: 1.8rem;
+  width: 23px;
 }
 .scroll-down::before {
   animation: scrollDownAnimation 2s infinite;
-  background-color: #7c7c7c;
-  border-radius: 30%;
+  background-color: #262626;
+  border-radius: 100%;
   content: "";
   height: 8px;
   left: 0;
@@ -86,6 +86,7 @@
   right: 0;
   top: 10px;
   width: 5px;
+  height: 5px;
 }
 @-moz-keyframes scrollDownAnimation {
   0% {
@@ -97,7 +98,7 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 20px);
+    transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
@@ -113,7 +114,7 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 20px);
+    transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
@@ -129,7 +130,7 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 20px);
+    transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
@@ -145,7 +146,7 @@
   }
   80% {
     opacity: 0;
-    transform: translate(0, 20px);
+    transform: translate(0, 15px);
   }
   100% {
     opacity: 0;
