@@ -28,7 +28,7 @@ const Navbar = () => {
       )}
     >
       <header
-        className={`primary-header flex max-w-[62rem] px-5 sm:px-3 h-20 mx-auto `}
+        className={`primary-header flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto `}
       >
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
