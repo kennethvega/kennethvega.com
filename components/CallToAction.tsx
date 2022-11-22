@@ -47,7 +47,7 @@ const CallToAction = () => {
         className="flex items-center justify-center mt-10 "
       >
         <Button onClick={handleModal}>
-          <p className="px-2 py-1 flex items-center justify-center">
+          <p className="px-2 py-1 flex items-center justify-center gap-2">
             Email <SiMinutemailer />
           </p>
         </Button>

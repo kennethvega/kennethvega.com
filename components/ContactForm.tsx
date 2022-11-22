@@ -117,7 +117,7 @@ const ContactForm = () => {
             </p>
           ) : (
             <Button type="submit">
-              <p className="px-2 py-1 flex items-center justify-center">
+              <p className="px-2 py-1 flex items-center justify-center gap-2">
                 Send <SiMinutemailer />
               </p>
             </Button>
