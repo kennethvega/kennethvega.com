@@ -28,7 +28,7 @@ const Hero = () => {
             transition={{ duration: 0.3, delay: 1.4 }}
             className="text-[2rem] md:text-2xl sm:text-lg"
           >
-            A front-end software developer, currently focused on building
+            A front-end software engineer, currently focused on building
             beautiful web interfaces and web applications.
           </motion.span>
 
