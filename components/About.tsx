@@ -14,12 +14,12 @@ const About = () => {
     >
       <div className="text-base">
         <p>
-          Hi! I’m Kenneth Vega, I have a{" "}
+          Hi! I’m Kenneth Vega. I have a{" "}
           <strong>
             passion in designing, learning and building things for the web
           </strong>
-          . I like to resolve design problems and create interactive interface,{" "}
-          <strong>developing web experiences & web applications</strong>.
+          . I like to solve design problems, create interactive interface, and{" "}
+          <strong>develop web experiences & web applications</strong>.
         </p>
         <div className="my-3">
           Here are the technologies I’ve been working with.

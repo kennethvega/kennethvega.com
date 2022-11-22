@@ -72,6 +72,7 @@ const Navbar = () => {
                 Projects
               </Link>
             </motion.li>
+
             <motion.li
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -92,19 +93,20 @@ const Navbar = () => {
             >
               Contact
             </motion.li>
-
-            <motion.a
+            <motion.li
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.4 }}
-              href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(1).pdf?alt=media&token=2c2e2739-980d-40e6-8ab3-c7f2cb91a185"
-              target="_blank"
-              rel="noreferrer"
             >
-              <Button>
+              <motion.a
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(1).pdf?alt=media&token=2c2e2739-980d-40e6-8ab3-c7f2cb91a185"
+                target="_blank"
+                rel="noreferrer"
+                className="flex justify-center gap-2 items-center"
+              >
                 Resume <TbExternalLink />
-              </Button>
-            </motion.a>
+              </motion.a>
+            </motion.li>
 
             <div className="hidden md:flex gap-8 text-3xl ">
               <Tippy content="Github profile">
