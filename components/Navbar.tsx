@@ -7,9 +7,8 @@ import Link from "next/link";
 import { useModalContext } from "../context/ModalContext";
 import Tippy from "@tippyjs/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-
 import { TbExternalLink } from "react-icons/tb";
-import Button from "./utility/Button";
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -53,6 +52,7 @@ const Navbar = () => {
             toggled={isOpen}
             toggle={setIsOpen}
             aria-label="mobile menu navigation button"
+            button-name="mobile hamburger navigation menu"
           />
         </button>
         <nav>
@@ -98,14 +98,14 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.4 }}
             >
-              <motion.a
-                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(1).pdf?alt=media&token=2c2e2739-980d-40e6-8ab3-c7f2cb91a185"
+              <a
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(2).pdf?alt=media&token=43e01afb-0f35-48e3-99b8-b1b4416bc149"
                 target="_blank"
                 rel="noreferrer"
                 className="flex justify-center gap-2 items-center"
               >
                 Resume <TbExternalLink />
-              </motion.a>
+              </a>
             </motion.li>
 
             <div className="hidden md:flex gap-8 text-3xl ">
