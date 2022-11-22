@@ -66,7 +66,7 @@ const Hero = () => {
                 <Button>Look at my work &#8595;</Button>
               </Link>
               <a
-                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/kenneth-resume.pdf?alt=media&token=64e2622a-be35-4a66-87d4-2116de9c36cf"
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume.pdf?alt=media&token=1218750c-e6da-41df-b4a2-e2f63ec92d49"
                 target="_blank"
                 rel="noreferrer"
               >
