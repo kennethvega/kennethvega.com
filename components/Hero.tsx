@@ -65,11 +65,15 @@ const Hero = () => {
               <Link href="/#projects">
                 <Button>Look at my work &#8595;</Button>
               </Link>
-              <Link href="#">
+              <a
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/kenneth-resume.pdf?alt=media&token=64e2622a-be35-4a66-87d4-2116de9c36cf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Button>
                   View resume <TbExternalLink />
                 </Button>
-              </Link>
+              </a>
             </div>
           </motion.div>
           <motion.div

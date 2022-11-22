@@ -7,6 +7,9 @@ import Link from "next/link";
 import { useModalContext } from "../context/ModalContext";
 import Tippy from "@tippyjs/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
+import { TbExternalLink } from "react-icons/tb";
+import Button from "./utility/Button";
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -79,6 +82,7 @@ const Navbar = () => {
                 About
               </Link>
             </motion.li>
+
             <motion.li
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -88,6 +92,19 @@ const Navbar = () => {
             >
               Contact
             </motion.li>
+
+            <motion.a
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/kenneth-resume.pdf?alt=media&token=64e2622a-be35-4a66-87d4-2116de9c36cf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>
+                Resume <TbExternalLink />
+              </Button>
+            </motion.a>
 
             <div className="hidden md:flex gap-8 text-3xl ">
               <Tippy content="Github profile">
