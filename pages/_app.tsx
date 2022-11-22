@@ -37,6 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
             property="og:url"
             content="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/image-preview.png?alt=media&token=e82f3af7-4a66-448f-92f5-fa1575202e2b"
           />
+          <meta property="og:type" content="website" />
         </Head>
         <Component {...pageProps} />
       </Layout>
