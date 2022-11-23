@@ -18,8 +18,8 @@ const About = () => {
           <strong>
             passion in designing, learning and building things for the web
           </strong>
-          . I like to solve design problems, create interactive interface, and{" "}
-          <strong>develop web experiences & web applications</strong>.
+          . I like to solve design problems, create interactive interfaces,{" "}
+          <strong>develop web experiences and web applications</strong>.
         </p>
         <div className="my-3">
           Here are the technologies I’ve been working with.
