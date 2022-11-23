@@ -99,7 +99,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.4 }}
             >
               <a
-                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(2).pdf?alt=media&token=43e01afb-0f35-48e3-99b8-b1b4416bc149"
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(5).pdf?alt=media&token=52e4adca-dc6c-44c2-ae57-777c956adc15"
                 target="_blank"
                 rel="noreferrer"
                 className="flex justify-center gap-2 items-center"
