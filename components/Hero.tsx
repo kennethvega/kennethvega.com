@@ -12,30 +12,29 @@ const Hero = () => {
     <section className="h-[100vh] flex items-center justify-center">
       <div className="-mt-16 md:-mt-20">
         <div>
-          <h2 className="text-6xl md:text-5xl sm:text-3xl">
-            <motion.strong
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 1.2 }}
-            >
-              Hello, I’m Kenneth.
-            </motion.strong>
-          </h2>
-          <br />
-          <motion.span
-            initial={{ opacity: 0, y: 40 }}
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1.4 }}
+            transition={{ duration: 0.4, delay: 1.2 }}
+            className="text-6xl md:text-5xl sm:text-3xl"
+          >
+            <strong>Hello, I’m Kenneth.</strong>
+          </motion.h2>
+          <br />
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 1.4 }}
             className="text-[2rem] md:text-2xl sm:text-lg"
           >
             I am a front-end software engineer, currently focused on building
             beautiful web interfaces and web applications.
-          </motion.span>
+          </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 1.6 }}
+            transition={{ duration: 0.4, delay: 1.6 }}
           >
             <span className="text-3xl flex gap-10 mt-10 ">
               <Tippy content="Github profile">
@@ -79,7 +78,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1.6 }}
+            transition={{ duration: 0.3, delay: 1.9 }}
             className="scroll-down"
           ></motion.div>
         </div>
