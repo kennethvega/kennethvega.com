@@ -14,65 +14,6 @@ import {
   SiMongodb,
 } from "react-icons/si";
 
-// export const Stack = [
-//   {
-//     first: [
-//       {
-//         name: "JavaScript",
-//         logo: <IoLogoJavascript />,
-//       },
-//       {
-//         name: "TypeScript",
-//         logo: <SiTypescript />,
-//       },
-
-//       // {
-//       //   name: "Node.js",
-//       //   logo: <IoLogoNodejs />,
-//       // },
-//     ],
-//     second: [
-//       {
-//         name: "React",
-//         logo: <FaReact />,
-//       },
-//       {
-//         name: "Scss",
-//         logo: <IoLogoSass />,
-//       },
-//       // {
-//       //   name: "Express.js",
-//       //   logo: <SiExpress />,
-//       // },
-//     ],
-//     third: [
-//       {
-//         name: "Next.js",
-//         logo: <SiNextdotjs />,
-//       },
-//       {
-//         name: "Tailwindcss",
-//         logo: <SiTailwindcss />,
-//       },
-
-//       // {
-//       //   name: "MongoDB",
-//       //   logo: <SiMongodb />,
-//       // },
-
-//       {
-//         name: "Redux",
-//         logo: <SiRedux />,
-//       },
-
-//       {
-//         name: "Firebase",
-//         logo: <IoLogoFirebase />,
-//       },
-//     ],
-//   },
-// ];
-
 export const Stack = [
   {
     first: [
@@ -85,45 +26,44 @@ export const Stack = [
         logo: <SiTypescript />,
       },
 
-      // {
-      //   name: "Node.js",
-      //   logo: <IoLogoNodejs />,
-      // },
+      {
+        name: "Node.js",
+        logo: <IoLogoNodejs />,
+      },
     ],
     second: [
+      {
+        name: "React",
+        logo: <FaReact />,
+      },
       {
         name: "Scss",
         logo: <IoLogoSass />,
       },
       {
-        name: "React",
-        logo: <FaReact />,
+        name: "Express.js",
+        logo: <SiExpress />,
       },
-
-      // {
-      //   name: "Express.js",
-      //   logo: <SiExpress />,
-      // },
     ],
     third: [
-      {
-        name: "Redux",
-        logo: <SiRedux />,
-      },
-
-      {
-        name: "Tailwindcss",
-        logo: <SiTailwindcss />,
-      },
       {
         name: "Next.js",
         logo: <SiNextdotjs />,
       },
+      {
+        name: "Tailwindcss",
+        logo: <SiTailwindcss />,
+      },
 
-      // {
-      //   name: "MongoDB",
-      //   logo: <SiMongodb />,
-      // },
+      {
+        name: "MongoDB",
+        logo: <SiMongodb />,
+      },
+
+      {
+        name: "Redux",
+        logo: <SiRedux />,
+      },
 
       {
         name: "Firebase",
