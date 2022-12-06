@@ -23,7 +23,10 @@ const Navbar = () => {
   const scrollPosition = useScrollPosition();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
       className={classNames(
         scrollPosition > 100 ? "shadow" : "shadow-none",
         `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
@@ -32,16 +35,11 @@ const Navbar = () => {
       <header
         className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center`}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="font-bold cursor-pointer rounded-md"
-        >
+        <h1 className="font-bold cursor-pointer rounded-md">
           <Link href="/" aria-label="logo">
             KENNETH VEGA
           </Link>
-        </motion.h1>
+        </h1>
         <button
           className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
           aria-controls="primary-navigation"
@@ -62,42 +60,25 @@ const Navbar = () => {
               isOpen ? "active" : ""
             } primary-navigation flex justify-center items-center gap-7 text-sm`}
           >
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-              onClick={() => setIsOpen(false)}
-            >
+            <li onClick={() => setIsOpen(false)}>
               <Link href="/#projects" aria-label="kenneth vega projects">
                 Projects
               </Link>
-            </motion.li>
+            </li>
 
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.2 }}
-              onClick={() => setIsOpen(false)}
-            >
+            <li onClick={() => setIsOpen(false)}>
               <Link href="/#about" aria-label="kenneth vega about">
                 About
               </Link>
-            </motion.li>
+            </li>
 
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.3 }}
+            <li
               onClick={handleModal}
               className="px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300"
             >
               Contact
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.7 }}
-            >
+            </li>
+            <li>
               <a
                 href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(5).pdf?alt=media&token=52e4adca-dc6c-44c2-ae57-777c956adc15"
                 target="_blank"
@@ -106,7 +87,7 @@ const Navbar = () => {
               >
                 Resume <TbExternalLink />
               </a>
-            </motion.li>
+            </li>
 
             <div className="hidden md:flex gap-8 text-3xl ">
               <Tippy content="Github profile">
@@ -136,7 +117,7 @@ const Navbar = () => {
         </nav>
         {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
       </header>
-    </div>
+    </motion.div>
   );
 };
 

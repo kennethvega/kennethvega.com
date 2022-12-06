@@ -15,7 +15,7 @@ const Hero = () => {
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="text-6xl md:text-5xl sm:text-3xl"
           >
             <strong>Hello, I’m Kenneth.</strong>
@@ -24,7 +24,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.4 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             className="text-[2rem] md:text-2xl sm:text-lg"
           >
             I am a front-end software engineer, currently focused on building
@@ -34,7 +34,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 1.6 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
           >
             <span className="text-3xl flex gap-10 mt-10 ">
               <Tippy content="Github profile">
@@ -78,7 +78,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 1.9 }}
+            transition={{ duration: 0.3, delay: 0.9 }}
             className="scroll-down"
           ></motion.div>
         </div>
