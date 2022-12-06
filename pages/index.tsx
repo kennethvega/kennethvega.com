@@ -3,15 +3,14 @@ import Container from "../components/utility/Container";
 import { AnimatePresence } from "framer-motion";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import { useModalContext } from "../context/ModalContext";
-import dynamic from "next/dynamic";
+
 import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
 import data from "../asset/project.json";
 import { getPlaiceholder } from "plaiceholder";
-// dynamic imports
-const ProjectItem = dynamic(() => import("../components/ProjectItem"));
-const About = dynamic(() => import("../components/About"));
-const CallToAction = dynamic(() => import("../components/CallToAction"));
+import ProjectItem from "../components/ProjectItem";
+import About from "../components/About";
+import CallToAction from "../components/CallToAction";
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();

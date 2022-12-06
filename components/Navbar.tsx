@@ -1,5 +1,5 @@
 import Hamburger from "hamburger-react";
-import  { useState } from "react";
+import { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Overlay from "./utility/Overlay";
 import { motion } from "framer-motion";
@@ -54,7 +54,7 @@ const Navbar = () => {
           />
         </button>
         <nav>
-          <ul
+          <motion.ul
             id="primary-navigation"
             className={`${
               isOpen ? "active" : ""
@@ -113,7 +113,7 @@ const Navbar = () => {
                 </a>
               </Tippy>
             </div>
-          </ul>
+          </motion.ul>
         </nav>
         {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
       </header>

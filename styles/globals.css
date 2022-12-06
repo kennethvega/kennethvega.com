@@ -192,7 +192,7 @@
 @media (max-width: 47.938em) {
   .primary-navigation {
     position: fixed;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 20%;
     background-color: white;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
