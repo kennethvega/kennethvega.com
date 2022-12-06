@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mycode",
+    "code": "https://github.com/kennethvega/mycode",
+    "demo": "https://mycode-react.vercel.app/",
+    "description": "Mycode is a social media web app that lets developers add documentation of their code and share it with the world. features include crud functionality and user authentication.",
+    "tools": ["React", "TypeScript", "Firebase", "Redux", "Scss"],
+    "imgSrc": [
+      "/images/mycode/mycode-1.png",
+      "/images/mycode/mycode-2.png",
+      "/images/mycode/mycode-3.png",
+      "/images/mycode/mycode-4.png",
+      "/images/mycode/mycode-5.png"
+    ]
+  },
+  {
+    "name": "Plantito",
+    "code": "https://github.com/kennethvega/Plantito",
+    "demo": "https://plantito.vercel.app/",
+    "description": " Fully functioning E-commerce web app for plants with responsive design and stripe payment implementation.",
+    "tools": ["Nextjs", "Sanity", "Stripe", "Scss"],
+    "imgSrc": [
+      "/images/plantito/plantito-1.png",
+      "/images/plantito/plantito-2.png",
+      "/images/plantito/plantito-3.png",
+      "/images/plantito/plantito-4.png"
+    ]
+  },
+  {
+    "name": "Portfolio",
+    "code": "https://github.com/kennethvega/minimalist-portfolio",
+    "demo": "https://www.kennethvega.com/",
+    "description": "A minimalist website portfolio for software engineers that is very fast and has a responsive design,  good SEO, and functionality that showcases projects in a clean and effective way.",
+    "tools": ["Nextjs", "TypeScript", "Firebase", "TailwindCSS"],
+    "imgSrc": [
+      "/images/portfolio/portfolio-1.png",
+      "/images/portfolio/portfolio-2.png",
+      "/images/portfolio/portfolio-3.png",
+      "/images/portfolio/portfolio-4.png"
+    ]
+  }
+]

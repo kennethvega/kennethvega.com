@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import profile from "../asset/profile.png";
 import Skills from "./Skills";
 import { motion } from "framer-motion";
 const About = () => {
@@ -28,7 +27,7 @@ const About = () => {
       </div>
       <div className="mx-auto">
         <Image
-          src={profile}
+          src="/profile.png"
           width={200}
           height={200}
           alt="Kenneth's profile picture"

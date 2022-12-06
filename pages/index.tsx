@@ -6,7 +6,8 @@ import { useModalContext } from "../context/ModalContext";
 import dynamic from "next/dynamic";
 import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
-import { project } from "../asset/project";
+import data from "../asset/project.json";
+import { getPlaiceholder } from "plaiceholder";
 // dynamic imports
 const ProjectItem = dynamic(() => import("../components/ProjectItem"));
 const About = dynamic(() => import("../components/About"));
@@ -55,8 +56,28 @@ export default function Home({ projectData }: ProjectsDataProps) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
+  const images_data = await Promise.all(
+    data.map(async (data) => {
+      const images = data.imgSrc;
+
+      const imagesData = await Promise.all(
+        images.map(async (imgItem) => {
+          const { base64, img } = await getPlaiceholder(imgItem);
+          return {
+            ...img,
+            base64: base64,
+          };
+        })
+      );
+
+      return { ...data, imgSrc: imagesData };
+    })
+  );
+
   return {
-    props: { projectData: project },
+    props: {
+      projectData: images_data,
+    },
   };
-};
+}

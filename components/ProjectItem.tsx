@@ -54,7 +54,7 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
         </div>
       </div>
       <div>
-        <ImageSlider images={data.images} />
+        <ImageSlider images={data.imgSrc} />
       </div>
     </motion.div>
   );

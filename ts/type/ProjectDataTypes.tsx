@@ -8,5 +8,5 @@ export type ProjectsItem = {
   code: string;
   demo: string;
   tools: string[];
-  images: string[];
+  imgSrc: string[];
 };
