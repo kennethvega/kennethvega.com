@@ -1,13 +1,12 @@
 import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
 import { AnimatePresence } from "framer-motion";
-import { collection, getDocs, query } from "firebase/firestore";
-import { db, postToJSON } from "../lib/firebase-config";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import { useModalContext } from "../context/ModalContext";
 import dynamic from "next/dynamic";
 import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
+import { project } from "../asset/project";
 // dynamic imports
 const ProjectItem = dynamic(() => import("../components/ProjectItem"));
 const About = dynamic(() => import("../components/About"));
@@ -15,7 +14,6 @@ const CallToAction = dynamic(() => import("../components/CallToAction"));
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
-
   return (
     <Container>
       <>
@@ -26,9 +24,10 @@ export default function Home({ projectData }: ProjectsDataProps) {
           </h3>
           <hr />
           <div className="flex flex-col gap-8">
-            {projectData?.map((data) => (
-              <ProjectItem data={data} key={data.name} />
-            ))}
+            {projectData &&
+              projectData?.map((data) => (
+                <ProjectItem data={data} key={data.name} />
+              ))}
           </div>
           <p>
             <strong> MERN stack project coming soon....</strong>
@@ -57,10 +56,7 @@ export default function Home({ projectData }: ProjectsDataProps) {
 }
 
 export const getStaticProps = async () => {
-  const projectQuery = query(collection(db, "projects"));
-  const querySnapshot = await getDocs(projectQuery);
-  const projectData = querySnapshot.docs.map(postToJSON);
   return {
-    props: { projectData },
+    props: { projectData: project },
   };
 };
