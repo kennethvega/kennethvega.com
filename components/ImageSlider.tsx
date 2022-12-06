@@ -1,4 +1,4 @@
-import React from "react";
+
 import Image from "next/image";
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import Button from "./utility/Button";
 import { TbExternalLink } from "react-icons/tb";
 import { AiFillGithub } from "react-icons/ai";

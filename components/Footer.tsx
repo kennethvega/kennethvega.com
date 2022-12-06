@@ -1,5 +1,5 @@
 import Tippy from "@tippyjs/react";
-import React from "react";
+
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {

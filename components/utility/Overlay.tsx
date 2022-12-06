@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 type OutlineProps = {
   handleClose?: (e: React.MouseEvent<HTMLElement>) => void;

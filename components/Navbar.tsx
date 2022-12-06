@@ -1,5 +1,5 @@
 import Hamburger from "hamburger-react";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Overlay from "./utility/Overlay";
 import { motion } from "framer-motion";

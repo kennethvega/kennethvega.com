@@ -1,4 +1,4 @@
-import React from "react";
+
 import Button from "./utility/Button";
 import { SiMinutemailer } from "react-icons/si";
 import { useModalContext } from "../context/ModalContext";
