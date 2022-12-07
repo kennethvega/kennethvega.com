@@ -14,23 +14,24 @@ function classNames(...classes: string[]) {
 }
 const NavMobile = () => {
   const { setOpenModal } = useModalContext();
+  const [isOpen, setIsOpen] = useState(false);
   const handleModal = () => {
     setOpenModal(true);
     document.body.style.overflow = "hidden";
     setIsOpen(false);
   };
+
   const scrollPosition = useScrollPosition();
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
+        transition={{ duration: 0.3 }}
         className={classNames(
           scrollPosition > 100 ? "shadow" : "shadow-none",
-          `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
+          `sticky top-0 bg-white z-30 w-full xmd:px-5 sm:px-0`
         )}
       >
         <header
@@ -44,19 +45,6 @@ const NavMobile = () => {
               KENNETH VEGA
             </Link>
           </h1>
-          <button
-            className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
-            aria-controls="primary-navigation"
-            aria-expanded="false"
-            aria-label="button"
-          >
-            <Hamburger
-              toggled={isOpen}
-              toggle={setIsOpen}
-              aria-label="mobile menu navigation button"
-              button-name="mobile hamburger navigation menu"
-            />
-          </button>
         </header>
       </motion.div>
       <nav>
@@ -64,7 +52,7 @@ const NavMobile = () => {
           id="primary-navigation"
           className={`${
             isOpen ? "active" : ""
-          } primary-navigation  flex justify-center items-center gap-5 text-sm`}
+          } primary-navigation  flex justify-center items-center gap-5 text-sm z-50 bg-white`}
         >
           <li onClick={() => setIsOpen(false)}>
             <Link href="/#projects" aria-label="kenneth vega projects">
@@ -121,6 +109,22 @@ const NavMobile = () => {
           </div>
         </ul>
       </nav>
+      <motion.button
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="flex z-50 mobile-nav-toggle  fixed top-2 right-4"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="button"
+      >
+        <Hamburger
+          toggled={isOpen}
+          toggle={setIsOpen}
+          aria-label="mobile menu navigation button"
+          button-name="mobile hamburger navigation menu"
+        />
+      </motion.button>
       {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
     </>
   );
