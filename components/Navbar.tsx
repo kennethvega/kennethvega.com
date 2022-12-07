@@ -26,7 +26,7 @@ const Navbar = () => {
     <motion.div
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.3, delay: 0.9 }}
       className={classNames(
         scrollPosition > 100 ? "shadow" : "shadow-none",
         `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
