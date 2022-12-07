@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   // Built by Kenneth Vega
   return (
-    <section className="min-h-[100vh] flex items-center justify-center">
+    <section className="min-h-[100vh] min-w-full flex items-center justify-center">
       <div className="-mt-16 md:-mt-20">
         <div>
           <motion.h2

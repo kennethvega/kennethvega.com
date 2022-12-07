@@ -2,13 +2,12 @@ import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { useScrollPosition } from "../hooks/useScrollPosition";
 import Overlay from "./utility/Overlay";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useModalContext } from "../context/ModalContext";
 import Tippy from "@tippyjs/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { TbExternalLink } from "react-icons/tb";
-
+import { motion } from "framer-motion";
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -26,7 +25,7 @@ const Navbar = () => {
     <motion.div
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
       className={classNames(
         scrollPosition > 100 ? "shadow" : "shadow-none",
         `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
@@ -54,11 +53,11 @@ const Navbar = () => {
           />
         </button>
         <nav>
-          <motion.ul
+          <ul
             id="primary-navigation"
             className={`${
               isOpen ? "active" : ""
-            } primary-navigation flex justify-center items-center gap-7 text-sm`}
+            } primary-navigation flex justify-center items-center gap-5 text-sm`}
           >
             <li onClick={() => setIsOpen(false)}>
               <Link href="/#projects" aria-label="kenneth vega projects">
@@ -113,7 +112,7 @@ const Navbar = () => {
                 </a>
               </Tippy>
             </div>
-          </motion.ul>
+          </ul>
         </nav>
         {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
       </header>
