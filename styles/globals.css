@@ -38,8 +38,6 @@
     background-color: #ffff;
   }
   body {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
     font-family: "Poppins", sans-serif;
   }
 

@@ -58,7 +58,7 @@ const NavMobile = () => {
             id="primary-navigation"
             className={`${
               isOpen ? "active" : ""
-            } primary-navigation flex justify-center items-center gap-5 text-sm`}
+            } primary-navigation  flex justify-center items-center gap-5 text-sm`}
           >
             <li onClick={() => setIsOpen(false)}>
               <Link href="/#projects" aria-label="kenneth vega projects">
