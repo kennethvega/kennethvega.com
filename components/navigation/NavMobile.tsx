@@ -23,38 +23,39 @@ const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
-      className={classNames(
-        scrollPosition > 100 ? "shadow" : "shadow-none",
-        `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
-      )}
-    >
-      <header
-        className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center`}
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+        className={classNames(
+          scrollPosition > 100 ? "shadow" : "shadow-none",
+          `sticky top-0 bg-white z-50 w-full xmd:px-5 sm:px-0`
+        )}
       >
-        <h1 className="font-bold cursor-pointer rounded-md">
-          <Link href="/" aria-label="logo">
-            KENNETH VEGA
-          </Link>
-        </h1>
-        <button
-          className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-          aria-label="button"
+        <header
+          className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center`}
         >
-          <Hamburger
-            toggled={isOpen}
-            toggle={setIsOpen}
-            aria-label="mobile menu navigation button"
-            button-name="mobile hamburger navigation menu"
-          />
-        </button>
-        {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
-      </header>
+          <h1 className="font-bold cursor-pointer rounded-md">
+            <Link href="/" aria-label="logo">
+              KENNETH VEGA
+            </Link>
+          </h1>
+          <button
+            className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+            aria-label="button"
+          >
+            <Hamburger
+              toggled={isOpen}
+              toggle={setIsOpen}
+              aria-label="mobile menu navigation button"
+              button-name="mobile hamburger navigation menu"
+            />
+          </button>
+        </header>
+      </motion.div>
       <nav>
         <ul
           id="primary-navigation"
@@ -117,7 +118,8 @@ const NavMobile = () => {
           </div>
         </ul>
       </nav>
-    </motion.div>
+      {isOpen && <Overlay handleClose={() => setIsOpen(false)} />}
+    </>
   );
 };
 
