@@ -11,17 +11,23 @@ import { getPlaiceholder } from "plaiceholder";
 import ProjectItem from "../components/ProjectItem";
 import About from "../components/About";
 import CallToAction from "../components/CallToAction";
-
+import { motion } from "framer-motion";
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
   return (
     <Container>
       <>
         <Hero />
-        <section>
-          <h3 id="projects" className="text-xl font-semibold mb-3">
+        <section id="projects">
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-xl font-semibold mb-3"
+          >
             Projects
-          </h3>
+          </motion.h3>
           <hr />
           <div className="flex flex-col gap-8">
             {projectData &&
