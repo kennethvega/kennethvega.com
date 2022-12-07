@@ -1,9 +1,11 @@
+import React from "react";
+
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import { useScrollPosition } from "../hooks/useScrollPosition";
-import Overlay from "./utility/Overlay";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
+import Overlay from "./../utility/Overlay";
 import Link from "next/link";
-import { useModalContext } from "../context/ModalContext";
+import { useModalContext } from "../../context/ModalContext";
 import Tippy from "@tippyjs/react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { TbExternalLink } from "react-icons/tb";
@@ -11,8 +13,7 @@ import { motion } from "framer-motion";
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
-
-const Navbar = () => {
+const NavDesktop = () => {
   const { setOpenModal } = useModalContext();
   const handleModal = () => {
     setOpenModal(true);
@@ -21,6 +22,7 @@ const Navbar = () => {
   };
   const scrollPosition = useScrollPosition();
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -30 }}
@@ -39,25 +41,10 @@ const Navbar = () => {
             KENNETH VEGA
           </Link>
         </h1>
-        <button
-          className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-          aria-label="button"
-        >
-          <Hamburger
-            toggled={isOpen}
-            toggle={setIsOpen}
-            aria-label="mobile menu navigation button"
-            button-name="mobile hamburger navigation menu"
-          />
-        </button>
         <nav>
           <ul
             id="primary-navigation"
-            className={`${
-              isOpen ? "active" : ""
-            } primary-navigation flex justify-center items-center gap-5 text-sm`}
+            className={`flex justify-center items-center gap-5 text-sm`}
           >
             <li onClick={() => setIsOpen(false)}>
               <Link href="/#projects" aria-label="kenneth vega projects">
@@ -120,4 +107,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavDesktop;

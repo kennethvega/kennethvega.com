@@ -1,7 +1,6 @@
-
 import React, { ReactNode } from "react";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Navigation from "./navigation/Navigation";
 
 type LayoutProps = {
   children: ReactNode;
@@ -11,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <>
-        <Navbar />
+        <Navigation />
       </>
       <main>{children}</main>
       <footer className="flex flex-col gap-3 justify-center items-center my-4">

@@ -189,22 +189,21 @@
   font-size: 1.5rem !important;
 }
 /* mobile navigation */
-@media (max-width: 47.938em) {
-  .primary-navigation {
-    position: fixed;
-    inset: 0 0 0 20%;
-    background-color: white;
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2em;
-    gap: 3rem;
-    z-index: 40;
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
-    font-size: 1.5rem;
-    display: hidden;
-  }
-  .active {
-    transform: translateX(0%);
-    display: flex;
-  }
+
+.primary-navigation {
+  position: fixed;
+  inset: 0 0 0 20%;
+  background-color: white;
+  flex-direction: column;
+  padding: min(30vh, 10rem) 2em;
+  gap: 3rem;
+  z-index: 40;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+  font-size: 1.5rem;
+  display: hidden;
+}
+.active {
+  transform: translateX(0%);
+  display: flex;
 }
