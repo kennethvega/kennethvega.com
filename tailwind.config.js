@@ -26,7 +26,11 @@ module.exports = {
       xsm: { max: "582px" },
       xxsm: { max: "485px" },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
+      },
+    },
   },
   plugins: [],
 };

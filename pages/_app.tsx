@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
 import { ModalContext } from "../context/ModalContext";
 import Head from "next/head";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ModalContext>
@@ -45,7 +46,9 @@ export default function App({ Component, pageProps }: AppProps) {
           />
           <meta property="og:type" content="website" />
         </Head>
-        <Component {...pageProps} />
+        <main>
+          <Component {...pageProps} />
+        </main>
       </Layout>
     </ModalContext>
   );

@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import { useModalContext } from "../context/ModalContext";
-import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
 import data from "../asset/project.json";
 import { getPlaiceholder } from "plaiceholder";
@@ -12,6 +11,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+const Modal = dynamic(() => import("../components/utility/Modal"));
 const DynamicAbout = dynamic(() => import("../components/About"), {
   suspense: true,
 });
