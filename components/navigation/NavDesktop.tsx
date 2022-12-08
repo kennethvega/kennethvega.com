@@ -31,7 +31,7 @@ const NavDesktop = () => {
       <header
         className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center`}
       >
-        <h1 data-aos="fade-in" className="font-bold cursor-pointer rounded-md">
+        <h1 className="font-bold cursor-pointer rounded-md">
           <Link href="/" aria-label="logo">
             KENNETH VEGA
           </Link>
