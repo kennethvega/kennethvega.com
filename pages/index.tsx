@@ -1,9 +1,7 @@
 import Hero from "../components/Hero";
 import Container from "../components/utility/Container";
-import { AnimatePresence } from "framer-motion";
 import { ProjectsDataProps } from "../ts/type/ProjectDataTypes";
 import { useModalContext } from "../context/ModalContext";
-
 import Modal from "../components/utility/Modal";
 import ContactForm from "../components/ContactForm";
 import data from "../asset/project.json";
@@ -11,23 +9,23 @@ import { getPlaiceholder } from "plaiceholder";
 import ProjectItem from "../components/ProjectItem";
 import About from "../components/About";
 import CallToAction from "../components/CallToAction";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
+
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
+  const nodeRef = useRef(null);
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
   return (
     <Container>
       <>
         <Hero />
         <section id="projects">
-          <motion.h3
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.5 }}
-            className="text-xl font-semibold mb-3"
-          >
-            Projects
-          </motion.h3>
+          <h3 className="text-xl font-semibold mb-3">Projects</h3>
           <hr />
           <div className="flex flex-col gap-8">
             {projectData &&
@@ -40,7 +38,7 @@ export default function Home({ projectData }: ProjectsDataProps) {
           </p>
         </section>
         <div id="about" className="mb-20" />
-        <section>
+        <section data-aos="fade-up" data-aos-once="true">
           <h3 className="text-xl font-semibold mb-3 mt-10">About me</h3>
           <hr />
           <About />
@@ -49,13 +47,11 @@ export default function Home({ projectData }: ProjectsDataProps) {
           <hr />
           <CallToAction />
         </section>
-        <AnimatePresence>
-          {openModal && (
-            <Modal openModal onClose={() => setOpenModal(false)}>
-              <ContactForm />
-            </Modal>
-          )}
-        </AnimatePresence>
+        {openModal && (
+          <Modal openModal onClose={() => setOpenModal(false)}>
+            <ContactForm />
+          </Modal>
+        )}
       </>
     </Container>
   );

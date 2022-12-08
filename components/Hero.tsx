@@ -3,38 +3,31 @@ import { TbExternalLink } from "react-icons/tb";
 import Button from "./utility/Button";
 import Tippy from "@tippyjs/react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const Hero = () => {
-  // Built by Kenneth Vega
   return (
     <section className="min-h-[100vh] min-w-full flex items-center justify-center">
       <div className="-mt-16 md:-mt-20">
         <div>
-          <motion.h2
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-            className="text-6xl md:text-5xl sm:text-3xl"
+          <h2
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay="500"
+            className="text-6xl md:text-5xl sm:text-3xl "
           >
             <strong>Hello, I’m Kenneth.</strong>
-          </motion.h2>
+          </h2>
           <br />
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="text-[2rem] md:text-2xl sm:text-lg"
+          <p
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-delay="600"
+            className="text-[2rem] md:text-2xl sm:text-lg "
           >
             I am a front-end software engineer, currently focused on building
             beautiful web interfaces and web applications.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.6 }}
-          >
+          </p>
+          <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700">
             <span className="text-3xl flex gap-10 mt-10 ">
               <Tippy content="Github profile">
                 <a
@@ -73,13 +66,9 @@ const Hero = () => {
                 </Button>
               </a>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.9 }}
-            className="scroll-down"
-          ></motion.div>
+          </div>
+
+          <div className="scroll-down"></div>
         </div>
       </div>
     </section>

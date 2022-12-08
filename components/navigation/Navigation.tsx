@@ -17,12 +17,6 @@ const Navigation: React.FC = () => {
     <>
       {matchesQuery === true && <NavDesktop />}
       {matchesQuery === false && <NavMobile />}
-      <button
-        className="hidden md:flex z-50 mobile-nav-toggle  absolute top-2 right-4"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-        aria-label="button"
-      ></button>
     </>
   );
 };

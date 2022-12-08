@@ -1,9 +1,8 @@
-
 import Button from "./utility/Button";
 import { TbExternalLink } from "react-icons/tb";
 import { AiFillGithub } from "react-icons/ai";
 import { ProjectsItem } from "../ts/type/ProjectDataTypes";
-import { motion } from "framer-motion";
+
 import ImageSlider from "./ImageSlider";
 
 export type ProjectsItemProps = {
@@ -12,11 +11,9 @@ export type ProjectsItemProps = {
 
 const ProjectItem = ({ data }: ProjectsItemProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
-      viewport={{ once: true, amount: 0.5 }}
+    <div
+      data-aos="fade-up"
+      data-aos-once="true"
       className="grid grid-cols-2 mt-10 gap-2 mb-10 xmd:grid-cols-1 xmd:justify-center xmd:items-center"
     >
       <div className="flex flex-col justify-between">
@@ -56,7 +53,7 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
       <div>
         <ImageSlider images={data.imgSrc} />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
