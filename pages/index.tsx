@@ -7,16 +7,24 @@ import ContactForm from "../components/ContactForm";
 import data from "../asset/project.json";
 import { getPlaiceholder } from "plaiceholder";
 import ProjectItem from "../components/ProjectItem";
-import About from "../components/About";
-import CallToAction from "../components/CallToAction";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
-
+import { useEffect } from "react";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+const DynamicAbout = dynamic(() => import("../components/About"), {
+  suspense: true,
+});
+const DynamicCallToAction = dynamic(
+  () => import("../components/CallToAction"),
+  {
+    suspense: true,
+  }
+);
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
-  const nodeRef = useRef(null);
+
   useEffect(() => {
     AOS.init({ duration: 500 });
   }, []);
@@ -41,11 +49,15 @@ export default function Home({ projectData }: ProjectsDataProps) {
         <section data-aos="fade-up" data-aos-once="true">
           <h3 className="text-xl font-semibold mb-3 mt-10">About me</h3>
           <hr />
-          <About />
+          <Suspense fallback={`Loading...`}>
+            <DynamicAbout />
+          </Suspense>
         </section>
         <section className="mt-10">
           <hr />
-          <CallToAction />
+          <Suspense fallback={`Loading...`}>
+            <DynamicCallToAction />
+          </Suspense>
         </section>
         {openModal && (
           <Modal openModal onClose={() => setOpenModal(false)}>
