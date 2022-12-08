@@ -5,6 +5,12 @@ import { ProjectsItem } from "../ts/type/ProjectDataTypes";
 
 import ImageSlider from "./ImageSlider";
 
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+const DynamicImageSlider = dynamic(() => import("./ImageSlider"), {
+  suspense: true,
+});
+
 export type ProjectsItemProps = {
   data: ProjectsItem;
 };
@@ -51,7 +57,9 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
         </div>
       </div>
       <div>
-        <ImageSlider images={data.imgSrc} />
+        <Suspense fallback={`Loading...`}>
+          <DynamicImageSlider images={data.imgSrc} />
+        </Suspense>
       </div>
     </div>
   );
