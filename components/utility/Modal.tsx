@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { CSSTransition } from "react-transition-group";
 import Overlay from "./Overlay";
 
 type ModalProps = {
@@ -22,23 +21,19 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
 
   const modalContent = (
     <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-      <CSSTransition
-        in={openModal}
-        timeout={300}
-        appear={true}
-        unmountOnExit
-        classNames="modal"
+      <div
+        data-aos="zoom-in"
+        className="relative w-auto my-6 mx-auto max-w-3xl xsm:mx-0 bg-white z-50 p-10 xsm:p-2 rounded"
       >
-        <div className="relative w-auto my-6 mx-auto max-w-3xl xsm:mx-0 bg-white z-50 p-10 xsm:p-2 rounded">
-          <p
-            className="cursor-pointer text-4xl absolute top-2 right-6"
-            onClick={handleClose}
-          >
-            &times;
-          </p>
-          <div>{children}</div>
-        </div>
-      </CSSTransition>
+        <p
+          className="cursor-pointer text-4xl absolute top-2 right-6"
+          onClick={handleClose}
+        >
+          &times;
+        </p>
+        <div>{children}</div>
+      </div>
+
       <Overlay handleClose={handleClose} />
     </div>
   );
