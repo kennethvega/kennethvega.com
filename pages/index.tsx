@@ -12,7 +12,7 @@ import CallToAction from "../components/CallToAction";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
-import { CSSTransition } from "react-transition-group";
+
 
 export default function Home({ projectData }: ProjectsDataProps) {
   const { openModal, setOpenModal } = useModalContext();
