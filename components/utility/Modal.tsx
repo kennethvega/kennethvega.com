@@ -20,7 +20,7 @@ const Modal = ({ openModal, onClose, children }: ModalProps) => {
   };
 
   const modalContent = (
-    <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+    <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none ">
       <div
         data-aos="zoom-in"
         className="relative w-auto my-6 mx-auto max-w-3xl xsm:mx-0 bg-white z-50 p-10 xsm:p-2 rounded"
