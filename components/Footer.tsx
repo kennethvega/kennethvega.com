@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <div className="text-xl flex gap-5 mt-24 text-gray-500">
-        <Tippy content="Github profile">
+        <Tippy content="Github profile" className="__className_f6433a">
           <a
             href="https://github.com/kennethvega"
             target="_blank"
@@ -17,7 +17,7 @@ const Footer = () => {
             <AiFillGithub />
           </a>
         </Tippy>
-        <Tippy content="Linkedin profile">
+        <Tippy content="Linkedin profile" className="__className_f6433a">
           <a
             href="https://www.linkedin.com/in/kenneth-vega-5bb9b3237/"
             target="_blank"

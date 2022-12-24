@@ -73,9 +73,9 @@ const ContactForm = () => {
       {!isEmailSent ? (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 xsm:items-center"
+          className="flex flex-col gap-5 xsm:items-center __className_f6433a"
         >
-          <h3 className="text-xl font-semibold">Get in touch</h3>
+          <h3 className="text-xl font-semibold ">Get in touch</h3>
           <label htmlFor="name">
             <span>Name</span>
             <input

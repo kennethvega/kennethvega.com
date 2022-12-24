@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
           <div data-aos="fade-up" data-aos-once="true" data-aos-delay="700">
             <span className="text-3xl flex gap-10 mt-10 ">
-              <Tippy content="Github profile">
+              <Tippy className="__className_f6433a" content="Github profile">
                 <a
                   href="https://github.com/kennethvega"
                   target="_blank"
@@ -40,7 +40,7 @@ const Hero = () => {
                   <AiFillGithub />
                 </a>
               </Tippy>
-              <Tippy content="Linkedin profile">
+              <Tippy className="__className_f6433a" content="Linkedin profile">
                 <a
                   href="https://www.linkedin.com/in/kenneth-vega-5bb9b3237/"
                   target="_blank"
