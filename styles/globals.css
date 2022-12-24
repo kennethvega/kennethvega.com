@@ -14,7 +14,7 @@
   html {
     scrollbar-width: normal;
     scrollbar-color: #777 #555;
-
+    font-style: Poppins, sans-serif;
     scroll-behavior: smooth !important;
   }
 
