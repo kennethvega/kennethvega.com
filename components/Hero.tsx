@@ -68,7 +68,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="scroll-down"></div>
+          <div
+            data-aos="fade-zoom-in"
+            data-aos-once="true"
+            data-aos-delay="750"
+            className="scroll-down"
+          ></div>
         </div>
       </div>
     </section>

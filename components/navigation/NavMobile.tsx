@@ -113,8 +113,7 @@ const NavMobile = () => {
         aria-controls="primary-navigation"
         aria-expanded="false"
         aria-label="button"
-        data-aos="fade-down"
-        data-aos-once="true"
+        
       >
         <Hamburger
           toggled={isOpen}
