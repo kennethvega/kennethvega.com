@@ -24,15 +24,15 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
     >
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-3">
-          <h3 className="text-4xl font-bold md:text-2xl">{data.name}</h3>
+          <h3 className="text-4xl font-bold md:text-2xl __className_f6433a">{data.name}</h3>
           <p>{data.description}</p>
-          <div className="mt-5 flex text-sm gap-4 text-gray-500 flex-wrap">
+          <div className="mt-5 flex text-sm gap-4 text-gray-500 flex-wrap __className_f6433a">
             {data.tools.map((tool) => (
               <span key={tool}>#{tool}</span>
             ))}
           </div>
         </div>
-        <div className="mt-10 flex gap-4">
+        <div className="mt-10 flex gap-4 __className_f6433a">
           <a
             href={data.demo}
             target="_blank"

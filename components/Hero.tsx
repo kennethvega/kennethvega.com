@@ -13,7 +13,7 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="500"
-            className="text-6xl md:text-5xl sm:text-3xl "
+            className="text-6xl md:text-5xl sm:text-3xl __className_f6433a"
           >
             <strong>Hello, I’m Kenneth.</strong>
           </h2>
@@ -22,7 +22,7 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="600"
-            className="text-[2rem] md:text-2xl sm:text-lg "
+            className="text-[2rem] md:text-2xl sm:text-lg __className_f6433a"
           >
             I am a front-end software engineer, currently focused on building
             beautiful web interfaces and web applications.

@@ -4,7 +4,7 @@ import Skills from "./Skills";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-2 mt-10 md:grid-cols-1 md:gap-10">
+    <div className="grid grid-cols-2 mt-10 md:grid-cols-1 md:gap-10 __className_f6433a">
       <div className="text-base">
         <p>
           Hi! I’m Kenneth Vega. I have a{" "}

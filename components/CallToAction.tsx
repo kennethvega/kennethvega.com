@@ -14,7 +14,7 @@ const CallToAction = () => {
         data-aos="fade-up"
         data-aos-once="true"
         data-aos-delay="500"
-        className="mt-24 text-6xl md:text-4xl font-bold text-center"
+        className="mt-24 text-6xl md:text-4xl font-bold text-center __className_f6433a"
       >
         Say hi to Kenneth.
       </h2>
@@ -22,7 +22,7 @@ const CallToAction = () => {
         data-aos="fade-up"
         data-aos-once="true"
         data-aos-delay="600"
-        className="text-center mt-3"
+        className="text-center mt-3 __className_f6433a"
       >
         I would love to hear from you. Whether it’s a project, a job
         opportunity, <br /> or just a chat. Feel free to contact me.
@@ -52,5 +52,4 @@ const CallToAction = () => {
 };
 
 export default CallToAction;
-// className =
-//   "px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300";
+

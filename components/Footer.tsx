@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
         </Tippy>
       </div>
-      <p className="text-gray-500 text-sm">
+      <p className="text-gray-500 text-sm __className_f6433a">
         Built and designed by Kenneth Vega
       </p>
     </>
