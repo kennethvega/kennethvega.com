@@ -46,7 +46,7 @@ export default function Home({ projectData }: ProjectsDataProps) {
           </p>
         </section>
         <div id="about" className="mb-20" />
-        <section data-aos="fade-up" data-aos-once="true">
+        <section data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
           <h3 className="text-xl font-semibold mb-3 mt-10 __className_f6433a">
             About me
           </h3>

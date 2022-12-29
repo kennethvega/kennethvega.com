@@ -20,11 +20,14 @@ const ProjectItem = ({ data }: ProjectsItemProps) => {
     <div
       data-aos="fade-up"
       data-aos-once="true"
+      data-aos-delay="400"
       className="grid grid-cols-2 mt-10 gap-2 mb-10 xmd:grid-cols-1 xmd:justify-center xmd:items-center"
     >
       <div className="flex flex-col justify-between">
         <div className="flex flex-col gap-3">
-          <h3 className="text-4xl font-bold md:text-2xl __className_f6433a">{data.name}</h3>
+          <h3 className="text-4xl font-bold md:text-2xl __className_f6433a">
+            {data.name}
+          </h3>
           <p>{data.description}</p>
           <div className="mt-5 flex text-sm gap-4 text-gray-500 flex-wrap __className_f6433a">
             {data.tools.map((tool) => (
