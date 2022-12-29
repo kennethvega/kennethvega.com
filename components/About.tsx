@@ -9,10 +9,10 @@ const About = () => {
         <p>
           Hi! I’m Kenneth Vega. I have a{" "}
           <strong>
-            passion in designing, learning and building things for the web
+            passion for designing, learning, and building things for the web
           </strong>
-          . I like to solve design problems, create interactive interfaces,{" "}
-          <strong>develop web experiences and web applications</strong>.
+          . I like to solve design problems, create interactive interfaces, and
+          <strong> develop web experiences and web applications</strong>.
         </p>
         <div className="my-3">
           Here are the technologies I’ve been working with.

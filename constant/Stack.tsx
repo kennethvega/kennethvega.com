@@ -61,7 +61,7 @@ export const Stack = [
       },
 
       {
-        name: "Redux",
+        name: "Redux Toolkit",
         logo: <SiRedux />,
       },
 
