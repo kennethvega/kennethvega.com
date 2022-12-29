@@ -32,7 +32,7 @@ export default function Home({ projectData }: ProjectsDataProps) {
     <Container>
       <>
         <Hero />
-        <section id="projects __className_f6433a">
+        <section id="projects" className="__className_f6433a">
           <h3 className="text-xl font-semibold mb-3">Projects</h3>
           <hr />
           <div className="flex flex-col gap-8">
@@ -47,7 +47,9 @@ export default function Home({ projectData }: ProjectsDataProps) {
         </section>
         <div id="about" className="mb-20" />
         <section data-aos="fade-up" data-aos-once="true">
-          <h3 className="text-xl font-semibold mb-3 mt-10 __className_f6433a">About me</h3>
+          <h3 className="text-xl font-semibold mb-3 mt-10 __className_f6433a">
+            About me
+          </h3>
           <hr />
           <Suspense fallback={`Loading...`}>
             <DynamicAbout />
