@@ -29,13 +29,13 @@ const NavDesktop = () => {
       )}
     >
       <header
-        className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center __className_f6433a `} 
+        className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center __className_f6433a `}
       >
-        <h1 className="font-bold cursor-pointer rounded-md">
-          <Link href="/" aria-label="logo">
+        <Link href="/" aria-label="logo">
+          <h1 className="font-bold cursor-pointer rounded-md __className_f6433a">
             KENNETH VEGA
-          </Link>
-        </h1>
+          </h1>
+        </Link>
         <nav>
           <ul
             id="primary-navigation"

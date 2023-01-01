@@ -34,14 +34,14 @@ const NavMobile = () => {
         <header
           className={`flex max-w-[62rem] px-5 sm:px-3 h-16 mx-auto justify-between items-center __className_f6433a`}
         >
-          <h1
-            className="font-bold cursor-pointer rounded-md"
-            onClick={() => setIsOpen(false)}
-          >
-            <Link href="/" aria-label="logo">
+          <Link href="/" aria-label="logo">
+            <h1
+              className="font-bold cursor-pointer rounded-md __className_f6433a"
+              onClick={() => setIsOpen(false)}
+            >
               KENNETH VEGA
-            </Link>
-          </h1>
+            </h1>
+          </Link>
         </header>
       </div>
       <nav>

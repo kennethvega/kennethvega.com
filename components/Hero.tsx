@@ -15,7 +15,7 @@ const Hero = () => {
             data-aos-delay="200"
             className="text-6xl md:text-5xl sm:text-3xl __className_f6433a"
           >
-            <strong>Hello, I’m Kenneth.</strong>
+            <strong className="__className_f6433a">Hello, I’m Kenneth.</strong>
           </h2>
           <br />
           <p
