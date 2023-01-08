@@ -41,9 +41,6 @@ export default function Home({ projectData }: ProjectsDataProps) {
                 <ProjectItem data={data} key={data.name} />
               ))}
           </div>
-          <p>
-            <strong> MERN stack project coming soon....</strong>
-          </p>
         </section>
         <div id="about" className="mb-20" />
         <section data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
