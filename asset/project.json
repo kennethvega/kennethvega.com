@@ -15,6 +15,30 @@
     ]
   },
   {
+    "name": "Jt-toursandtravels",
+    "code": "https://github.com/kennethvega/jt-travel-agency",
+    "demo": "https://jt-toursandtravels.web.app/",
+    "description": "This project is a complete travel agency business with a client booking website + a sub-domain for admins to upload content(Content management system) + a CRUD REST-API with authentication using JWT token.",
+    "tools": [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+      "JWT"
+    ],
+    "imgSrc": [
+      "/images/jt-tours/jt-tours-1.jpg",
+      "/images/jt-tours/jt-tours-2.jpg",
+      "/images/jt-tours/jt-tours-3.jpg",
+      "/images/jt-tours/jt-tours-4.jpg",
+      "/images/jt-tours/jt-tours-5.jpg",
+      "/images/jt-tours/jt-tours-6.jpg",
+      "/images/jt-tours/jt-tours-7.png"
+    ]
+  },
+  {
     "name": "Plantito",
     "code": "https://github.com/kennethvega/Plantito",
     "demo": "https://plantito.vercel.app/",
