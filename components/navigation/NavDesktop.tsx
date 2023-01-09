@@ -61,7 +61,7 @@ const NavDesktop = () => {
             </li>
             <li>
               <a
-                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume%20(5).pdf?alt=media&token=52e4adca-dc6c-44c2-ae57-777c956adc15"
+                href="https://firebasestorage.googleapis.com/v0/b/my-portfolio-d50af.appspot.com/o/Kenneth%20Vega%20Resume.pdf?alt=media&token=ca458008-1910-490f-8a38-2ae5d391cc70"
                 target="_blank"
                 rel="noreferrer"
                 className="flex justify-center gap-2 items-center"
