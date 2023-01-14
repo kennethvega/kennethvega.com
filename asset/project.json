@@ -15,10 +15,10 @@
     ]
   },
   {
-    "name": "JT-ToursandTravels",
+    "name": "JT-Tours",
     "code": "https://github.com/kennethvega/jt-travel-agency",
     "demo": "https://jt-toursandtravels.web.app/",
-    "description": "This app is a travel agency I built for my cousin. I built a dynamic booking website + a sub-domain for the admins to upload contents (Content Management System) + a CRUD REST-API with authentication using JWT token.",
+    "description": "A travel agency web app with admin content management system (jt-toursandtravels-admin.web.app) with RESTful API using Express and MongoDB",
     "tools": [
       "React",
       "TypeScript",
@@ -35,7 +35,8 @@
       "/images/jt-tours/jt-tours-4.jpg",
       "/images/jt-tours/jt-tours-5.jpg",
       "/images/jt-tours/jt-tours-6.jpg",
-      "/images/jt-tours/jt-tours-7.png"
+      "/images/jt-tours/jt-tours-7.jpg",
+      "/images/jt-tours/jt-tours-8.png"
     ]
   },
   {
