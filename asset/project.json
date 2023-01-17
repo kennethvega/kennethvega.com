@@ -18,7 +18,7 @@
     "name": "JT-Tours",
     "code": "https://github.com/kennethvega/jt-travel-agency",
     "demo": "https://jt-toursandtravels.web.app/",
-    "description": "A travel agency web app with admin content management system (jt-toursandtravels-admin.web.app) with RESTful API using Express and MongoDB",
+    "description": "A travel agency web app with admin content management system with RESTful API using Express and MongoDB. Admin website link: https://jt-toursandtravels-admin.web.app/",
     "tools": [
       "React",
       "TypeScript",
