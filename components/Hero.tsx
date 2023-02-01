@@ -25,7 +25,16 @@ const Hero = () => {
             className="text-[2rem] md:text-2xl sm:text-lg __className_f6433a"
           >
             I am a full-stack software developer, currently focused on building
-            beautiful web interfaces and web applications.
+            beautiful web interfaces and web applications at{" "}
+            <a
+              href="https://www.enov8tive.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="company"
+              aria-label="Company website link"
+            >
+              enov8tive
+            </a>
           </p>
           <div data-aos="fade-up" data-aos-once="true" data-aos-delay="400">
             <span className="text-3xl flex gap-10 mt-10 ">

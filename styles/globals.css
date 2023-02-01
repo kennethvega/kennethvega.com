@@ -10,6 +10,9 @@
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
 @layer base {
   html {
     scrollbar-width: normal;
@@ -29,9 +32,6 @@
     background-color: #ffff;
   }
 
-  a {
-    @apply px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
-  }
   label {
     @apply flex flex-col w-[30rem] md:w-[25rem]  xxsm:w-[20rem];
   }
@@ -75,4 +75,18 @@
 .active {
   transform: translateX(0%);
   display: flex;
+}
+a {
+  @apply px-2 py-1 cursor-pointer rounded-md hover:bg-gray-200 transition-all duration-300;
+}
+
+.company {
+  padding: 0px;
+  color: #1d4ed8;
+  border-radius: 0;
+  transition: none;
+}
+.company:hover {
+  background-color: white;
+  color: #1d4ed8;
 }
