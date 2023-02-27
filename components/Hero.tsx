@@ -24,7 +24,7 @@ const Hero = () => {
             data-aos-delay="300"
             className="text-[2rem] md:text-2xl sm:text-lg __className_f6433a"
           >
-            I am a full-stack software developer, currently focused on building
+            I am a frontend software engineer, currently focused on building
             beautiful web interfaces and web applications at{" "}
             <a
               href="https://www.enov8tive.com/"
